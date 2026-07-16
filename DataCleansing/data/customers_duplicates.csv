@@ -1,0 +1,13 @@
+name,email,phone,gender,country
+Bob Dubois,ALICE.MARTIN@GMAIL.COM,+33623456789,Male,Belgique
+alice martin,bob.dubois@yahoo.fr,+33623456789,Male,Belgique
+Bob Dubois,bob.dubois@yahoo.fr,+33 6 12 34 56 78,Male,Belgique
+David Bernard,david.bernard@company.com,+33645678901,F,Suisse
+Claire Petit,claire.petit@outlook.com,+33634567890,Female,FR
+Alice Martin,alice.martin@gmail.com,+33612345678,Female,France
+David Bernard,david.bernard@company.com,+33645678901,Male,Suisse
+David Bernard,david.bernard@company.com,+33645678901,Male,Suisse
+Claire Petit,claire.petit@outlook.com,+33634567890,Female,France
+Claire Petit,claire.petit@outlook.com,+33634567890,Female,France
+Alice Martin,alice.martin@gmail.com,+33612345678,Female,France
+Alice Martin,alice.martin@gmail.com,+33612345678,Female,France

@@ -1,0 +1,501 @@
+order_id,customer_id,product,price,quantity,category,order_date,shipping_address
+1,8270,Laptop,1463.85,2,Accessories,2023-01-01 00:00:00,
+2,1860,Phone,761.59,3,Electronics,2023-01-01 01:00:00,"4 Main St, City"
+3,6390,Phone,1098.2,4,Electronics,2023-01-01 02:00:00,
+4,6191,Headphones,1240.25,4,Accessories,2023-01-01 03:00:00,
+5,6734,Laptop,1091.76,3,Electronics,2023-01-01 04:00:00,
+6,7265,Laptop,825.8,2,Accessories,2023-01-01 05:00:00,"76 Main St, City"
+7,1466,Phone,741.1,1,Accessories,2023-01-01 06:00:00,
+8,5426,Tablet,1265.94,1,Accessories,2023-01-01 07:00:00,
+9,6578,Phone,347.36,2,Electronics,2023-01-01 08:00:00,
+10,9322,Laptop,1453.59,4,Accessories,2023-01-01 09:00:00,
+11,2685,Headphones,1080.88,4,Accessories,2023-01-01 10:00:00,"92 Main St, City"
+12,1769,Phone,,4,Electronics,2023-01-01 11:00:00,"29 Main St, City"
+13,7949,Laptop,1117.56,4,Accessories,2023-01-01 12:00:00,"76 Main St, City"
+14,3433,Phone,818.27,2,Accessories,2023-01-01 13:00:00,
+15,6311,Tablet,1075.48,4,Accessories,2023-01-01 14:00:00,"90 Main St, City"
+16,6051,Phone,1163.28,3,Accessories,2023-01-01 15:00:00,"44 Main St, City"
+17,7420,Phone,176.57,4,Accessories,2023-01-01 16:00:00,
+18,2184,Laptop,783.85,1,Electronics,2023-01-01 17:00:00,"98 Main St, City"
+19,5555,Laptop,1401.42,4,Accessories,2023-01-01 18:00:00,
+20,4385,Laptop,,2,Accessories,2023-01-01 19:00:00,
+21,7396,Phone,911.13,1,Electronics,2023-01-01 20:00:00,"46 Main St, City"
+22,9666,Tablet,585.38,2,Electronics,2023-01-01 21:00:00,"78 Main St, City"
+23,3558,Headphones,708.69,2,Electronics,2023-01-01 22:00:00,"6 Main St, City"
+24,8849,Headphones,845.47,1,Accessories,2023-01-01 23:00:00,
+25,3047,Laptop,,2,Electronics,2023-01-02 00:00:00,
+26,3747,Laptop,342.51,2,Accessories,2023-01-02 01:00:00,"71 Main St, City"
+27,1189,Phone,1042.63,4,Accessories,2023-01-02 02:00:00,"81 Main St, City"
+28,3734,Headphones,177.41,3,Electronics,2023-01-02 03:00:00,
+29,4005,Laptop,251.3,2,Electronics,2023-01-02 04:00:00,
+30,5658,Tablet,53.93,2,Accessories,2023-01-02 05:00:00,
+31,2899,Tablet,,2,Electronics,2023-01-02 06:00:00,"99 Main St, City"
+32,8734,Laptop,736.09,4,Accessories,2023-01-02 07:00:00,
+33,2267,Laptop,928.85,3,Electronics,2023-01-02 08:00:00,"13 Main St, City"
+34,2528,Headphones,1201.72,1,Electronics,2023-01-02 09:00:00,"36 Main St, City"
+35,4556,Headphones,204.71,4,Electronics,2023-01-02 10:00:00,"82 Main St, City"
+36,4890,Phone,1283.55,4,Accessories,2023-01-02 11:00:00,"21 Main St, City"
+37,9838,Headphones,1131.66,3,Electronics,2023-01-02 12:00:00,
+38,6393,Tablet,642.35,3,Accessories,2023-01-02 13:00:00,"86 Main St, City"
+39,9792,Tablet,1402.76,4,Accessories,2023-01-02 14:00:00,
+40,9433,Laptop,1486.85,1,Accessories,2023-01-02 15:00:00,
+41,8513,Headphones,347.25,4,Accessories,2023-01-02 16:00:00,
+42,3612,Phone,599.88,3,Electronics,2023-01-02 17:00:00,"21 Main St, City"
+43,8041,Tablet,1393.35,1,Accessories,2023-01-02 18:00:00,
+44,7235,Tablet,1096.31,3,Accessories,2023-01-02 19:00:00,
+45,6486,Phone,119.74,1,Electronics,2023-01-02 20:00:00,"88 Main St, City"
+46,8099,Phone,1183.2,2,Accessories,2023-01-02 21:00:00,
+47,1775,Tablet,1250.51,3,Electronics,2023-01-02 22:00:00,
+48,9226,Tablet,1138.23,3,Accessories,2023-01-02 23:00:00,"41 Main St, City"
+49,4152,Phone,1209.33,4,Electronics,2023-01-03 00:00:00,
+50,2585,Tablet,1246.44,3,Accessories,2023-01-03 01:00:00,"28 Main St, City"
+51,4943,Laptop,320.29,3,Electronics,2023-01-03 02:00:00,"28 Main St, City"
+52,8555,Laptop,391.75,2,Accessories,2023-01-03 03:00:00,"51 Main St, City"
+53,4073,Phone,968.95,3,Accessories,2023-01-03 04:00:00,"19 Main St, City"
+54,2021,Headphones,1366.41,2,Electronics,2023-01-03 05:00:00,
+55,4843,Phone,508.49,2,Electronics,2023-01-03 06:00:00,"96 Main St, City"
+56,8989,Phone,903.04,2,Electronics,2023-01-03 07:00:00,
+57,7873,Headphones,1040.32,2,Electronics,2023-01-03 08:00:00,"75 Main St, City"
+58,6675,Headphones,705.33,1,Accessories,2023-01-03 09:00:00,
+59,1161,Headphones,1084.98,4,Accessories,2023-01-03 10:00:00,"18 Main St, City"
+60,5297,Laptop,1354.52,1,Electronics,2023-01-03 11:00:00,
+61,1995,Tablet,954.95,3,Accessories,2023-01-03 12:00:00,
+62,8629,Laptop,832.68,1,Electronics,2023-01-03 13:00:00,
+63,2016,Tablet,686.18,1,Electronics,2023-01-03 14:00:00,"88 Main St, City"
+64,8869,Laptop,887.36,3,Accessories,2023-01-03 15:00:00,
+65,7439,Tablet,565.28,3,Accessories,2023-01-03 16:00:00,"50 Main St, City"
+66,8892,Laptop,617.65,3,Accessories,2023-01-03 17:00:00,"77 Main St, City"
+67,7863,Headphones,821.19,1,Accessories,2023-01-03 18:00:00,"68 Main St, City"
+68,8916,Phone,,1,Accessories,2023-01-03 19:00:00,
+69,9529,Laptop,382.09,3,Accessories,2023-01-03 20:00:00,
+70,1878,Tablet,837.13,4,Accessories,2023-01-03 21:00:00,"88 Main St, City"
+71,5887,Headphones,675.72,4,Electronics,2023-01-03 22:00:00,"99 Main St, City"
+72,5859,Laptop,532.58,2,Electronics,2023-01-03 23:00:00,"15 Main St, City"
+73,7331,Laptop,1109.3,3,Electronics,2023-01-04 00:00:00,
+74,9571,Headphones,1055.89,2,Electronics,2023-01-04 01:00:00,
+75,9684,Laptop,291.76,4,Electronics,2023-01-04 02:00:00,"93 Main St, City"
+76,8208,Phone,1324.01,2,Accessories,2023-01-04 03:00:00,
+77,6276,Laptop,768.36,3,Electronics,2023-01-04 04:00:00,
+78,3062,Phone,1125.12,3,Electronics,2023-01-04 05:00:00,"81 Main St, City"
+79,1064,Phone,,3,Electronics,2023-01-04 06:00:00,
+80,9006,Headphones,1496.65,1,Electronics,2023-01-04 07:00:00,"20 Main St, City"
+81,3568,Laptop,1140.98,2,Electronics,2023-01-04 08:00:00,
+82,6463,Headphones,1075.12,4,Electronics,2023-01-04 09:00:00,
+83,3027,Laptop,1178.93,4,Electronics,2023-01-04 10:00:00,
+84,3695,Laptop,257.54,4,Accessories,2023-01-04 11:00:00,
+85,6258,Tablet,346.59,1,Accessories,2023-01-04 12:00:00,"15 Main St, City"
+86,6618,Laptop,1085.39,1,Electronics,2023-01-04 13:00:00,
+87,7736,Headphones,766.27,3,Accessories,2023-01-04 14:00:00,
+88,1391,Phone,1144.22,4,Accessories,2023-01-04 15:00:00,
+89,6892,Laptop,199.23,1,Accessories,2023-01-04 16:00:00,"11 Main St, City"
+90,4561,Tablet,827.9,3,Accessories,2023-01-04 17:00:00,
+91,7184,Headphones,599.29,4,Electronics,2023-01-04 18:00:00,"17 Main St, City"
+92,4099,Laptop,,2,Accessories,2023-01-04 19:00:00,
+93,7278,Headphones,925.74,3,Accessories,2023-01-04 20:00:00,"34 Main St, City"
+94,9392,Tablet,778.32,1,Accessories,2023-01-04 21:00:00,
+95,4104,Tablet,,1,Electronics,2023-01-04 22:00:00,"92 Main St, City"
+96,8215,Headphones,,3,Electronics,2023-01-04 23:00:00,"52 Main St, City"
+97,3454,Laptop,642.99,3,Electronics,2023-01-05 00:00:00,"57 Main St, City"
+98,9996,Phone,1169.23,1,Electronics,2023-01-05 01:00:00,
+99,3731,Tablet,67.69,2,Electronics,2023-01-05 02:00:00,
+100,9154,Laptop,917.74,4,Electronics,2023-01-05 03:00:00,
+101,6056,Laptop,869.99,2,Electronics,2023-01-05 04:00:00,
+102,9110,Phone,1088.46,3,Accessories,2023-01-05 05:00:00,
+103,4840,Tablet,918.59,2,Accessories,2023-01-05 06:00:00,
+104,2028,Tablet,1248.86,1,Accessories,2023-01-05 07:00:00,
+105,8385,Laptop,1440.66,3,Electronics,2023-01-05 08:00:00,
+106,1502,Laptop,546.66,4,Electronics,2023-01-05 09:00:00,"5 Main St, City"
+107,7910,Phone,379.66,1,Electronics,2023-01-05 10:00:00,
+108,7938,Phone,664.22,1,Electronics,2023-01-05 11:00:00,"36 Main St, City"
+109,5488,Tablet,467.5,4,Electronics,2023-01-05 12:00:00,
+110,1206,Headphones,,4,Accessories,2023-01-05 13:00:00,"93 Main St, City"
+111,6134,Tablet,1372.19,2,Accessories,2023-01-05 14:00:00,"32 Main St, City"
+112,6977,Laptop,251.72,3,Electronics,2023-01-05 15:00:00,
+113,8721,Tablet,196.15,4,Electronics,2023-01-05 16:00:00,
+114,8035,Headphones,421.22,4,Electronics,2023-01-05 17:00:00,"85 Main St, City"
+115,2484,Phone,1102.84,3,Electronics,2023-01-05 18:00:00,"46 Main St, City"
+116,8858,Headphones,909.8,4,Accessories,2023-01-05 19:00:00,"53 Main St, City"
+117,1863,Headphones,,4,Electronics,2023-01-05 20:00:00,
+118,3790,Headphones,1382.19,2,Electronics,2023-01-05 21:00:00,
+119,8408,Phone,1195.62,1,Electronics,2023-01-05 22:00:00,"8 Main St, City"
+120,9755,Headphones,83.38,1,Electronics,2023-01-05 23:00:00,"94 Main St, City"
+121,6116,Headphones,994.48,1,Accessories,2023-01-06 00:00:00,
+122,7019,Headphones,1168.31,1,Electronics,2023-01-06 01:00:00,
+123,2757,Laptop,592.93,4,Electronics,2023-01-06 02:00:00,"69 Main St, City"
+124,8574,Headphones,149.94,3,Accessories,2023-01-06 03:00:00,"18 Main St, City"
+125,7374,Phone,162.12,3,Accessories,2023-01-06 04:00:00,"24 Main St, City"
+126,7892,Headphones,201.16,2,Accessories,2023-01-06 05:00:00,
+127,2678,Headphones,1268.64,2,Electronics,2023-01-06 06:00:00,"10 Main St, City"
+128,4242,Phone,,4,Electronics,2023-01-06 07:00:00,
+129,5636,Headphones,228.08,3,Accessories,2023-01-06 08:00:00,
+130,2059,Phone,392.06,3,Accessories,2023-01-06 09:00:00,
+131,7668,Headphones,290.0,1,Accessories,2023-01-06 10:00:00,"22 Main St, City"
+132,4157,Phone,320.17,4,Accessories,2023-01-06 11:00:00,"63 Main St, City"
+133,6915,Headphones,1264.36,4,Accessories,2023-01-06 12:00:00,"28 Main St, City"
+134,3693,Headphones,531.61,1,Accessories,2023-01-06 13:00:00,
+135,4627,Laptop,501.59,4,Electronics,2023-01-06 14:00:00,
+136,6450,Laptop,379.72,4,Electronics,2023-01-06 15:00:00,"50 Main St, City"
+137,2663,Headphones,931.45,2,Electronics,2023-01-06 16:00:00,"59 Main St, City"
+138,6592,Headphones,599.99,3,Accessories,2023-01-06 17:00:00,"55 Main St, City"
+139,8392,Tablet,1129.16,4,Accessories,2023-01-06 18:00:00,
+140,2306,Phone,348.09,2,Accessories,2023-01-06 19:00:00,
+141,7776,Tablet,,3,Accessories,2023-01-06 20:00:00,
+142,6864,Laptop,925.4,1,Accessories,2023-01-06 21:00:00,"96 Main St, City"
+143,8526,Laptop,215.69,2,Accessories,2023-01-06 22:00:00,
+144,9901,Laptop,651.03,2,Electronics,2023-01-06 23:00:00,"75 Main St, City"
+145,6575,Laptop,1302.1,3,Electronics,2023-01-07 00:00:00,
+146,6530,Headphones,,1,Accessories,2023-01-07 01:00:00,
+147,5413,Laptop,725.27,2,Electronics,2023-01-07 02:00:00,
+148,4748,Headphones,747.21,4,Accessories,2023-01-07 03:00:00,
+149,1663,Headphones,1381.76,4,Electronics,2023-01-07 04:00:00,
+150,2998,Laptop,901.25,4,Accessories,2023-01-07 05:00:00,
+151,8994,Laptop,97.63,1,Accessories,2023-01-07 06:00:00,
+152,2495,Phone,1373.49,2,Electronics,2023-01-07 07:00:00,
+153,4304,Tablet,409.93,4,Electronics,2023-01-07 08:00:00,
+154,4763,Laptop,887.57,1,Accessories,2023-01-07 09:00:00,"54 Main St, City"
+155,6232,Phone,289.99,4,Accessories,2023-01-07 10:00:00,
+156,2853,Phone,99.12,3,Electronics,2023-01-07 11:00:00,"86 Main St, City"
+157,7585,Tablet,501.64,2,Electronics,2023-01-07 12:00:00,"31 Main St, City"
+158,2291,Headphones,1181.72,2,Accessories,2023-01-07 13:00:00,
+159,4581,Laptop,452.5,1,Electronics,2023-01-07 14:00:00,"86 Main St, City"
+160,8554,Tablet,369.14,1,Accessories,2023-01-07 15:00:00,
+161,8280,Laptop,358.39,2,Accessories,2023-01-07 16:00:00,
+162,2636,Phone,797.0,4,Accessories,2023-01-07 17:00:00,"2 Main St, City"
+163,4696,Phone,1464.53,4,Accessories,2023-01-07 18:00:00,
+164,1698,Headphones,,3,Electronics,2023-01-07 19:00:00,
+165,5737,Phone,858.09,4,Electronics,2023-01-07 20:00:00,"65 Main St, City"
+166,1854,Phone,1297.92,1,Electronics,2023-01-07 21:00:00,"17 Main St, City"
+167,9164,Tablet,825.85,1,Electronics,2023-01-07 22:00:00,
+168,6855,Laptop,317.47,4,Electronics,2023-01-07 23:00:00,"48 Main St, City"
+169,8392,Laptop,484.41,1,Electronics,2023-01-08 00:00:00,"21 Main St, City"
+170,7528,Tablet,499.41,2,Electronics,2023-01-08 01:00:00,"70 Main St, City"
+171,6249,Headphones,626.11,2,Accessories,2023-01-08 02:00:00,
+172,6172,Laptop,668.84,4,Electronics,2023-01-08 03:00:00,"86 Main St, City"
+173,2707,Phone,,2,Electronics,2023-01-08 04:00:00,
+174,6791,Laptop,556.61,2,Accessories,2023-01-08 05:00:00,"18 Main St, City"
+175,6535,Phone,728.94,3,Electronics,2023-01-08 06:00:00,
+176,5931,Headphones,956.22,3,Electronics,2023-01-08 07:00:00,
+177,4510,Tablet,597.7,2,Accessories,2023-01-08 08:00:00,"35 Main St, City"
+178,1202,Laptop,1263.02,4,Electronics,2023-01-08 09:00:00,
+179,5218,Tablet,901.81,3,Electronics,2023-01-08 10:00:00,"92 Main St, City"
+180,9958,Laptop,476.36,1,Electronics,2023-01-08 11:00:00,"27 Main St, City"
+181,5389,Phone,1085.39,1,Accessories,2023-01-08 12:00:00,"65 Main St, City"
+182,3327,Tablet,815.09,1,Electronics,2023-01-08 13:00:00,
+183,9004,Laptop,824.96,4,Electronics,2023-01-08 14:00:00,"12 Main St, City"
+184,3931,Phone,747.58,2,Accessories,2023-01-08 15:00:00,
+185,8777,Tablet,770.67,1,Electronics,2023-01-08 16:00:00,"1 Main St, City"
+186,1197,Tablet,1159.77,4,Accessories,2023-01-08 17:00:00,
+187,8125,Laptop,199.32,3,Accessories,2023-01-08 18:00:00,"82 Main St, City"
+188,2930,Laptop,534.83,2,Electronics,2023-01-08 19:00:00,"21 Main St, City"
+189,7287,Laptop,159.48,3,Accessories,2023-01-08 20:00:00,"71 Main St, City"
+190,9800,Phone,1142.21,4,Accessories,2023-01-08 21:00:00,
+191,5282,Laptop,444.84,1,Electronics,2023-01-08 22:00:00,
+192,3511,Tablet,1351.27,1,Accessories,2023-01-08 23:00:00,
+193,1659,Tablet,813.54,4,Accessories,2023-01-09 00:00:00,
+194,3811,Laptop,1211.09,1,Electronics,2023-01-09 01:00:00,
+195,8098,Laptop,1469.45,2,Electronics,2023-01-09 02:00:00,
+196,7546,Headphones,1267.69,4,Electronics,2023-01-09 03:00:00,"6 Main St, City"
+197,2986,Tablet,1307.14,3,Accessories,2023-01-09 04:00:00,
+198,9338,Phone,641.58,4,Electronics,2023-01-09 05:00:00,
+199,3911,Headphones,850.0,2,Accessories,2023-01-09 06:00:00,
+200,2734,Laptop,418.14,2,Accessories,2023-01-09 07:00:00,
+201,2843,Laptop,334.36,4,Accessories,2023-01-09 08:00:00,"46 Main St, City"
+202,9680,Tablet,782.99,4,Accessories,2023-01-09 09:00:00,
+203,3976,Laptop,912.82,1,Accessories,2023-01-09 10:00:00,
+204,2959,Phone,541.94,2,Accessories,2023-01-09 11:00:00,"23 Main St, City"
+205,6759,Tablet,875.69,4,Accessories,2023-01-09 12:00:00,
+206,7694,Laptop,,4,Electronics,2023-01-09 13:00:00,"95 Main St, City"
+207,3385,Tablet,857.25,2,Electronics,2023-01-09 14:00:00,
+208,5736,Laptop,1095.18,4,Accessories,2023-01-09 15:00:00,
+209,2802,Laptop,1217.71,1,Accessories,2023-01-09 16:00:00,
+210,9155,Laptop,1483.66,2,Electronics,2023-01-09 17:00:00,
+211,9120,Phone,924.64,1,Accessories,2023-01-09 18:00:00,
+212,7616,Phone,1219.93,1,Electronics,2023-01-09 19:00:00,"26 Main St, City"
+213,6534,Tablet,1445.84,1,Electronics,2023-01-09 20:00:00,"45 Main St, City"
+214,5061,Laptop,1419.39,1,Electronics,2023-01-09 21:00:00,
+215,1262,Laptop,254.57,2,Accessories,2023-01-09 22:00:00,
+216,7287,Phone,639.27,1,Accessories,2023-01-09 23:00:00,"52 Main St, City"
+217,9815,Laptop,519.79,1,Electronics,2023-01-10 00:00:00,
+218,3049,Phone,176.04,4,Electronics,2023-01-10 01:00:00,"99 Main St, City"
+219,6423,Laptop,968.2,2,Electronics,2023-01-10 02:00:00,"45 Main St, City"
+220,5548,Tablet,1117.06,2,Electronics,2023-01-10 03:00:00,"87 Main St, City"
+221,4108,Laptop,1279.79,3,Electronics,2023-01-10 04:00:00,
+222,8158,Laptop,228.03,2,Accessories,2023-01-10 05:00:00,
+223,8400,Headphones,1320.84,2,Electronics,2023-01-10 06:00:00,"75 Main St, City"
+224,4170,Phone,982.24,3,Accessories,2023-01-10 07:00:00,
+225,3255,Laptop,1070.72,2,Electronics,2023-01-10 08:00:00,"77 Main St, City"
+226,2154,Laptop,1370.4,2,Accessories,2023-01-10 09:00:00,"45 Main St, City"
+227,5499,Headphones,955.9,2,Accessories,2023-01-10 10:00:00,
+228,7295,Headphones,537.01,2,Accessories,2023-01-10 11:00:00,
+229,7197,Phone,1246.41,3,Accessories,2023-01-10 12:00:00,
+230,2648,Headphones,576.44,2,Accessories,2023-01-10 13:00:00,"91 Main St, City"
+231,6539,Tablet,99.63,2,Accessories,2023-01-10 14:00:00,
+232,5199,Headphones,1254.45,3,Electronics,2023-01-10 15:00:00,"47 Main St, City"
+233,9445,Tablet,550.53,4,Accessories,2023-01-10 16:00:00,"9 Main St, City"
+234,3557,Phone,1172.06,1,Electronics,2023-01-10 17:00:00,"80 Main St, City"
+235,6592,Phone,576.0,4,Accessories,2023-01-10 18:00:00,
+236,1098,Phone,1298.55,3,Accessories,2023-01-10 19:00:00,"93 Main St, City"
+237,3200,Phone,368.29,1,Electronics,2023-01-10 20:00:00,"65 Main St, City"
+238,3961,Phone,,3,Accessories,2023-01-10 21:00:00,"86 Main St, City"
+239,5973,Tablet,1180.65,3,Electronics,2023-01-10 22:00:00,"42 Main St, City"
+240,5433,Tablet,215.64,2,Electronics,2023-01-10 23:00:00,"90 Main St, City"
+241,3869,Phone,870.38,1,Electronics,2023-01-11 00:00:00,
+242,1956,Headphones,1478.78,2,Electronics,2023-01-11 01:00:00,"25 Main St, City"
+243,9352,Laptop,733.04,1,Accessories,2023-01-11 02:00:00,"86 Main St, City"
+244,6699,Phone,314.06,3,Accessories,2023-01-11 03:00:00,
+245,7944,Headphones,752.93,3,Electronics,2023-01-11 04:00:00,"79 Main St, City"
+246,5493,Laptop,793.06,4,Accessories,2023-01-11 05:00:00,
+247,5911,Phone,1125.45,1,Accessories,2023-01-11 06:00:00,"39 Main St, City"
+248,4987,Phone,1063.33,2,Electronics,2023-01-11 07:00:00,"27 Main St, City"
+249,7015,Tablet,633.7,4,Accessories,2023-01-11 08:00:00,"75 Main St, City"
+250,2218,Laptop,366.13,4,Electronics,2023-01-11 09:00:00,"60 Main St, City"
+251,5496,Laptop,985.33,4,Electronics,2023-01-11 10:00:00,
+252,5735,Headphones,661.47,2,Accessories,2023-01-11 11:00:00,"66 Main St, City"
+253,5555,Tablet,,4,Accessories,2023-01-11 12:00:00,
+254,9050,Tablet,1355.83,2,Accessories,2023-01-11 13:00:00,
+255,4446,Tablet,1052.27,4,Electronics,2023-01-11 14:00:00,"37 Main St, City"
+256,2045,Tablet,,2,Electronics,2023-01-11 15:00:00,
+257,7893,Laptop,1242.75,3,Accessories,2023-01-11 16:00:00,"87 Main St, City"
+258,2693,Laptop,818.01,3,Accessories,2023-01-11 17:00:00,
+259,4436,Phone,1231.83,3,Accessories,2023-01-11 18:00:00,
+260,9754,Phone,772.23,3,Accessories,2023-01-11 19:00:00,
+261,6895,Tablet,147.4,3,Electronics,2023-01-11 20:00:00,
+262,4354,Tablet,637.61,4,Accessories,2023-01-11 21:00:00,"59 Main St, City"
+263,1225,Tablet,771.32,4,Electronics,2023-01-11 22:00:00,
+264,5893,Phone,1094.29,4,Electronics,2023-01-11 23:00:00,"92 Main St, City"
+265,8022,Headphones,204.54,2,Accessories,2023-01-12 00:00:00,"64 Main St, City"
+266,6600,Headphones,,2,Accessories,2023-01-12 01:00:00,
+267,8996,Phone,432.34,2,Accessories,2023-01-12 02:00:00,
+268,8683,Phone,436.42,2,Electronics,2023-01-12 03:00:00,
+269,5642,Phone,1111.67,3,Accessories,2023-01-12 04:00:00,
+270,8679,Phone,,3,Accessories,2023-01-12 05:00:00,"23 Main St, City"
+271,9208,Phone,967.99,3,Electronics,2023-01-12 06:00:00,
+272,8339,Phone,766.7,1,Accessories,2023-01-12 07:00:00,"16 Main St, City"
+273,3205,Tablet,881.28,4,Electronics,2023-01-12 08:00:00,"18 Main St, City"
+274,2069,Tablet,1265.26,2,Accessories,2023-01-12 09:00:00,"86 Main St, City"
+275,4444,Tablet,636.35,2,Electronics,2023-01-12 10:00:00,"97 Main St, City"
+276,2060,Tablet,,3,Accessories,2023-01-12 11:00:00,"79 Main St, City"
+277,3327,Phone,661.95,2,Accessories,2023-01-12 12:00:00,"71 Main St, City"
+278,4420,Headphones,563.11,2,Electronics,2023-01-12 13:00:00,"21 Main St, City"
+279,1301,Laptop,1440.01,4,Electronics,2023-01-12 14:00:00,"58 Main St, City"
+280,1606,Phone,317.34,3,Accessories,2023-01-12 15:00:00,
+281,4170,Laptop,,4,Electronics,2023-01-12 16:00:00,"82 Main St, City"
+282,1699,Headphones,1167.93,1,Electronics,2023-01-12 17:00:00,"99 Main St, City"
+283,6088,Tablet,148.96,1,Electronics,2023-01-12 18:00:00,
+284,1190,Headphones,1263.76,1,Electronics,2023-01-12 19:00:00,"36 Main St, City"
+285,1980,Phone,683.93,3,Accessories,2023-01-12 20:00:00,"10 Main St, City"
+286,3975,Tablet,1377.49,2,Accessories,2023-01-12 21:00:00,"31 Main St, City"
+287,7102,Phone,1096.22,3,Electronics,2023-01-12 22:00:00,
+288,2184,Tablet,,3,Electronics,2023-01-12 23:00:00,
+289,4327,Laptop,,2,Electronics,2023-01-13 00:00:00,
+290,4394,Laptop,625.14,4,Electronics,2023-01-13 01:00:00,"30 Main St, City"
+291,9319,Laptop,1433.43,1,Accessories,2023-01-13 02:00:00,
+292,2816,Headphones,245.75,4,Accessories,2023-01-13 03:00:00,
+293,6854,Phone,751.44,1,Electronics,2023-01-13 04:00:00,"9 Main St, City"
+294,7709,Headphones,441.37,3,Electronics,2023-01-13 05:00:00,"53 Main St, City"
+295,1569,Laptop,832.77,1,Electronics,2023-01-13 06:00:00,"70 Main St, City"
+296,6442,Phone,284.92,3,Accessories,2023-01-13 07:00:00,
+297,2895,Laptop,1270.22,4,Electronics,2023-01-13 08:00:00,"27 Main St, City"
+298,3733,Headphones,1277.29,3,Accessories,2023-01-13 09:00:00,
+299,4863,Headphones,1435.09,4,Electronics,2023-01-13 10:00:00,"98 Main St, City"
+300,8455,Headphones,274.27,2,Accessories,2023-01-13 11:00:00,
+301,5014,Laptop,953.83,2,Electronics,2023-01-13 12:00:00,"46 Main St, City"
+302,2686,Phone,737.64,2,Accessories,2023-01-13 13:00:00,"97 Main St, City"
+303,4009,Phone,549.36,3,Electronics,2023-01-13 14:00:00,
+304,8806,Laptop,559.73,2,Electronics,2023-01-13 15:00:00,
+305,1154,Phone,648.55,1,Electronics,2023-01-13 16:00:00,"35 Main St, City"
+306,2409,Laptop,1072.14,4,Accessories,2023-01-13 17:00:00,
+307,1784,Phone,917.51,4,Electronics,2023-01-13 18:00:00,"50 Main St, City"
+308,9096,Tablet,716.54,1,Accessories,2023-01-13 19:00:00,"86 Main St, City"
+309,8560,Tablet,160.1,3,Accessories,2023-01-13 20:00:00,
+310,8343,Headphones,,3,Electronics,2023-01-13 21:00:00,
+311,8206,Tablet,53.39,4,Electronics,2023-01-13 22:00:00,
+312,6596,Tablet,1453.16,2,Electronics,2023-01-13 23:00:00,
+313,6801,Tablet,57.62,3,Accessories,2023-01-14 00:00:00,"11 Main St, City"
+314,3806,Laptop,199.49,3,Electronics,2023-01-14 01:00:00,"18 Main St, City"
+315,1537,Tablet,506.17,1,Accessories,2023-01-14 02:00:00,
+316,6986,Tablet,,1,Accessories,2023-01-14 03:00:00,"34 Main St, City"
+317,2841,Headphones,1445.04,2,Electronics,2023-01-14 04:00:00,
+318,9716,Tablet,1195.52,3,Electronics,2023-01-14 05:00:00,"59 Main St, City"
+319,7971,Tablet,1051.31,3,Electronics,2023-01-14 06:00:00,"44 Main St, City"
+320,6625,Phone,805.89,1,Electronics,2023-01-14 07:00:00,"36 Main St, City"
+321,3950,Headphones,,3,Electronics,2023-01-14 08:00:00,
+322,8992,Headphones,1439.35,4,Electronics,2023-01-14 09:00:00,
+323,5780,Headphones,1149.67,1,Accessories,2023-01-14 10:00:00,
+324,3368,Headphones,976.48,2,Accessories,2023-01-14 11:00:00,
+325,7655,Headphones,1150.6,1,Accessories,2023-01-14 12:00:00,
+326,9173,Headphones,1099.95,3,Electronics,2023-01-14 13:00:00,
+327,5495,Laptop,973.99,2,Accessories,2023-01-14 14:00:00,
+328,7002,Tablet,1471.84,1,Accessories,2023-01-14 15:00:00,
+329,7614,Headphones,1359.88,4,Accessories,2023-01-14 16:00:00,
+330,6919,Tablet,987.66,4,Accessories,2023-01-14 17:00:00,
+331,1853,Tablet,1055.1,1,Accessories,2023-01-14 18:00:00,
+332,5146,Laptop,124.81,4,Electronics,2023-01-14 19:00:00,
+333,4769,Headphones,1021.38,4,Electronics,2023-01-14 20:00:00,"60 Main St, City"
+334,1574,Phone,,4,Accessories,2023-01-14 21:00:00,"99 Main St, City"
+335,2148,Laptop,902.98,2,Accessories,2023-01-14 22:00:00,
+336,7293,Phone,,4,Accessories,2023-01-14 23:00:00,"21 Main St, City"
+337,7457,Tablet,855.92,4,Electronics,2023-01-15 00:00:00,
+338,8509,Tablet,736.15,4,Electronics,2023-01-15 01:00:00,"40 Main St, City"
+339,5777,Laptop,503.64,2,Accessories,2023-01-15 02:00:00,
+340,4854,Laptop,224.76,1,Electronics,2023-01-15 03:00:00,
+341,3491,Phone,1109.98,3,Electronics,2023-01-15 04:00:00,"14 Main St, City"
+342,4124,Headphones,329.27,4,Accessories,2023-01-15 05:00:00,
+343,6691,Phone,217.16,1,Electronics,2023-01-15 06:00:00,
+344,4051,Laptop,661.56,4,Electronics,2023-01-15 07:00:00,"45 Main St, City"
+345,1004,Phone,1203.25,2,Accessories,2023-01-15 08:00:00,
+346,6222,Laptop,1130.34,1,Electronics,2023-01-15 09:00:00,"9 Main St, City"
+347,6315,Phone,129.58,2,Electronics,2023-01-15 10:00:00,"2 Main St, City"
+348,5869,Laptop,709.96,4,Accessories,2023-01-15 11:00:00,
+349,1876,Laptop,807.53,4,Electronics,2023-01-15 12:00:00,
+350,8027,Laptop,984.59,2,Electronics,2023-01-15 13:00:00,"82 Main St, City"
+351,5142,Headphones,992.74,3,Accessories,2023-01-15 14:00:00,
+352,7966,Phone,578.81,2,Accessories,2023-01-15 15:00:00,
+353,8079,Phone,862.98,4,Accessories,2023-01-15 16:00:00,"94 Main St, City"
+354,8987,Phone,747.54,2,Electronics,2023-01-15 17:00:00,"79 Main St, City"
+355,7799,Laptop,1333.25,3,Accessories,2023-01-15 18:00:00,"60 Main St, City"
+356,5465,Phone,818.88,2,Electronics,2023-01-15 19:00:00,"94 Main St, City"
+357,1635,Phone,689.5,3,Accessories,2023-01-15 20:00:00,
+358,2693,Laptop,636.5,3,Electronics,2023-01-15 21:00:00,"12 Main St, City"
+359,5752,Tablet,880.02,2,Accessories,2023-01-15 22:00:00,
+360,9311,Laptop,1215.77,2,Accessories,2023-01-15 23:00:00,"97 Main St, City"
+361,1830,Phone,830.68,1,Accessories,2023-01-16 00:00:00,"73 Main St, City"
+362,6177,Laptop,1009.4,4,Accessories,2023-01-16 01:00:00,
+363,9932,Tablet,1119.89,3,Electronics,2023-01-16 02:00:00,"64 Main St, City"
+364,9308,Laptop,804.24,1,Accessories,2023-01-16 03:00:00,"24 Main St, City"
+365,6949,Phone,668.88,2,Accessories,2023-01-16 04:00:00,"28 Main St, City"
+366,3838,Tablet,1321.16,4,Electronics,2023-01-16 05:00:00,"34 Main St, City"
+367,2150,Headphones,655.38,1,Accessories,2023-01-16 06:00:00,"36 Main St, City"
+368,8560,Phone,719.82,3,Electronics,2023-01-16 07:00:00,
+369,2931,Tablet,1485.99,1,Accessories,2023-01-16 08:00:00,
+370,2664,Tablet,50.34,3,Accessories,2023-01-16 09:00:00,
+371,2081,Headphones,318.94,2,Accessories,2023-01-16 10:00:00,"93 Main St, City"
+372,1512,Laptop,606.75,4,Electronics,2023-01-16 11:00:00,
+373,8805,Laptop,1402.26,4,Accessories,2023-01-16 12:00:00,"89 Main St, City"
+374,6237,Phone,151.54,4,Accessories,2023-01-16 13:00:00,"83 Main St, City"
+375,1559,Headphones,63.75,2,Accessories,2023-01-16 14:00:00,
+376,4672,Laptop,126.39,3,Electronics,2023-01-16 15:00:00,"12 Main St, City"
+377,8404,Headphones,178.39,2,Electronics,2023-01-16 16:00:00,"29 Main St, City"
+378,4343,Laptop,104.52,4,Accessories,2023-01-16 17:00:00,
+379,5070,Tablet,745.68,2,Electronics,2023-01-16 18:00:00,"40 Main St, City"
+380,1580,Laptop,892.1,2,Accessories,2023-01-16 19:00:00,"61 Main St, City"
+381,8004,Headphones,,2,Accessories,2023-01-16 20:00:00,"55 Main St, City"
+382,9130,Tablet,627.52,3,Accessories,2023-01-16 21:00:00,
+383,4147,Tablet,182.96,1,Accessories,2023-01-16 22:00:00,"35 Main St, City"
+384,5249,Tablet,537.74,1,Accessories,2023-01-16 23:00:00,
+385,2679,Headphones,807.65,2,Accessories,2023-01-17 00:00:00,
+386,4506,Phone,1111.79,1,Accessories,2023-01-17 01:00:00,
+387,8253,Phone,,1,Electronics,2023-01-17 02:00:00,
+388,3744,Phone,727.6,2,Electronics,2023-01-17 03:00:00,
+389,6188,Headphones,480.65,2,Electronics,2023-01-17 04:00:00,"95 Main St, City"
+390,3141,Tablet,,4,Electronics,2023-01-17 05:00:00,
+391,7617,Phone,1087.55,1,Electronics,2023-01-17 06:00:00,
+392,3479,Headphones,,3,Electronics,2023-01-17 07:00:00,
+393,7484,Phone,452.04,2,Electronics,2023-01-17 08:00:00,
+394,8421,Laptop,1369.99,4,Accessories,2023-01-17 09:00:00,
+395,5452,Phone,115.4,3,Accessories,2023-01-17 10:00:00,
+396,6881,Phone,208.73,1,Accessories,2023-01-17 11:00:00,
+397,7665,Tablet,617.86,4,Accessories,2023-01-17 12:00:00,"7 Main St, City"
+398,3849,Headphones,230.43,2,Electronics,2023-01-17 13:00:00,
+399,8390,Tablet,1436.8,3,Electronics,2023-01-17 14:00:00,"82 Main St, City"
+400,7905,Tablet,1207.08,2,Accessories,2023-01-17 15:00:00,
+401,3489,Tablet,425.52,1,Accessories,2023-01-17 16:00:00,"74 Main St, City"
+402,5611,Tablet,903.4,3,Electronics,2023-01-17 17:00:00,"61 Main St, City"
+403,3839,Tablet,1474.38,1,Accessories,2023-01-17 18:00:00,"57 Main St, City"
+404,9527,Phone,1332.09,1,Accessories,2023-01-17 19:00:00,
+405,6878,Tablet,,4,Accessories,2023-01-17 20:00:00,"33 Main St, City"
+406,7303,Tablet,1360.4,2,Accessories,2023-01-17 21:00:00,
+407,1851,Headphones,1484.32,3,Electronics,2023-01-17 22:00:00,"52 Main St, City"
+408,2687,Laptop,1127.86,1,Accessories,2023-01-17 23:00:00,
+409,7833,Phone,144.23,1,Accessories,2023-01-18 00:00:00,
+410,3427,Phone,632.29,3,Electronics,2023-01-18 01:00:00,"73 Main St, City"
+411,5000,Phone,1264.85,1,Electronics,2023-01-18 02:00:00,
+412,6052,Tablet,384.33,4,Accessories,2023-01-18 03:00:00,"16 Main St, City"
+413,3738,Tablet,1254.43,4,Electronics,2023-01-18 04:00:00,
+414,6732,Tablet,224.49,4,Accessories,2023-01-18 05:00:00,"67 Main St, City"
+415,6387,Headphones,118.07,4,Accessories,2023-01-18 06:00:00,
+416,9002,Laptop,606.93,1,Electronics,2023-01-18 07:00:00,"39 Main St, City"
+417,6536,Tablet,103.26,3,Accessories,2023-01-18 08:00:00,
+418,4913,Laptop,1438.04,3,Accessories,2023-01-18 09:00:00,
+419,2066,Headphones,1248.0,3,Accessories,2023-01-18 10:00:00,
+420,8723,Phone,1211.12,3,Accessories,2023-01-18 11:00:00,
+421,5380,Tablet,963.18,2,Electronics,2023-01-18 12:00:00,
+422,5107,Laptop,363.67,3,Electronics,2023-01-18 13:00:00,
+423,6726,Laptop,801.48,2,Accessories,2023-01-18 14:00:00,
+424,4373,Tablet,916.05,2,Electronics,2023-01-18 15:00:00,
+425,9945,Phone,,4,Accessories,2023-01-18 16:00:00,"53 Main St, City"
+426,3082,Phone,427.34,2,Accessories,2023-01-18 17:00:00,"89 Main St, City"
+427,9967,Phone,797.11,1,Accessories,2023-01-18 18:00:00,
+428,7748,Headphones,762.22,2,Accessories,2023-01-18 19:00:00,"30 Main St, City"
+429,1417,Laptop,1494.69,4,Accessories,2023-01-18 20:00:00,"91 Main St, City"
+430,9306,Laptop,1351.28,2,Electronics,2023-01-18 21:00:00,"90 Main St, City"
+431,9808,Laptop,721.9,1,Accessories,2023-01-18 22:00:00,
+432,4974,Headphones,953.26,1,Electronics,2023-01-18 23:00:00,
+433,4267,Laptop,1134.41,1,Electronics,2023-01-19 00:00:00,
+434,1825,Headphones,100.55,4,Accessories,2023-01-19 01:00:00,
+435,8668,Phone,1347.64,4,Accessories,2023-01-19 02:00:00,
+436,6745,Tablet,,3,Accessories,2023-01-19 03:00:00,
+437,1412,Laptop,713.28,4,Accessories,2023-01-19 04:00:00,
+438,8543,Laptop,617.2,1,Accessories,2023-01-19 05:00:00,"22 Main St, City"
+439,8587,Phone,445.79,1,Electronics,2023-01-19 06:00:00,"77 Main St, City"
+440,1728,Tablet,741.18,4,Accessories,2023-01-19 07:00:00,
+441,8164,Headphones,114.35,2,Accessories,2023-01-19 08:00:00,"60 Main St, City"
+442,9867,Tablet,1285.68,4,Electronics,2023-01-19 09:00:00,"90 Main St, City"
+443,6988,Phone,101.36,4,Electronics,2023-01-19 10:00:00,"35 Main St, City"
+444,3504,Phone,,1,Accessories,2023-01-19 11:00:00,
+445,3967,Tablet,1400.8,3,Electronics,2023-01-19 12:00:00,
+446,3786,Headphones,1116.06,1,Accessories,2023-01-19 13:00:00,"56 Main St, City"
+447,2122,Headphones,458.02,3,Electronics,2023-01-19 14:00:00,
+448,5079,Laptop,416.34,1,Electronics,2023-01-19 15:00:00,
+449,2571,Headphones,57.37,4,Accessories,2023-01-19 16:00:00,
+450,6073,Tablet,,1,Electronics,2023-01-19 17:00:00,"98 Main St, City"
+451,6104,Phone,120.74,1,Electronics,2023-01-19 18:00:00,
+452,3143,Laptop,,1,Electronics,2023-01-19 19:00:00,
+453,7806,Laptop,1445.08,4,Electronics,2023-01-19 20:00:00,"61 Main St, City"
+454,8357,Phone,208.73,4,Electronics,2023-01-19 21:00:00,
+455,4440,Headphones,1347.0,4,Electronics,2023-01-19 22:00:00,"75 Main St, City"
+456,4766,Phone,1487.64,4,Accessories,2023-01-19 23:00:00,"82 Main St, City"
+457,6644,Headphones,139.2,3,Accessories,2023-01-20 00:00:00,
+458,3914,Phone,1330.21,3,Electronics,2023-01-20 01:00:00,"45 Main St, City"
+459,5968,Tablet,798.31,2,Accessories,2023-01-20 02:00:00,"43 Main St, City"
+460,6917,Headphones,1364.44,4,Accessories,2023-01-20 03:00:00,
+461,9787,Tablet,878.41,3,Accessories,2023-01-20 04:00:00,"21 Main St, City"
+462,1728,Laptop,1010.06,1,Electronics,2023-01-20 05:00:00,"53 Main St, City"
+463,2365,Phone,838.48,4,Accessories,2023-01-20 06:00:00,
+464,5492,Laptop,1303.51,2,Electronics,2023-01-20 07:00:00,
+465,1698,Laptop,1114.17,2,Accessories,2023-01-20 08:00:00,
+466,8186,Laptop,,2,Electronics,2023-01-20 09:00:00,"41 Main St, City"
+467,1395,Laptop,1308.83,1,Electronics,2023-01-20 10:00:00,
+468,8400,Phone,405.66,3,Accessories,2023-01-20 11:00:00,"99 Main St, City"
+469,9082,Laptop,278.14,1,Accessories,2023-01-20 12:00:00,
+470,5171,Phone,282.58,4,Electronics,2023-01-20 13:00:00,"85 Main St, City"
+471,5360,Phone,534.31,2,Accessories,2023-01-20 14:00:00,
+472,3502,Tablet,396.1,1,Accessories,2023-01-20 15:00:00,"25 Main St, City"
+473,1717,Headphones,1398.63,1,Accessories,2023-01-20 16:00:00,"80 Main St, City"
+474,3782,Headphones,203.46,3,Electronics,2023-01-20 17:00:00,"81 Main St, City"
+475,5946,Phone,1063.54,3,Electronics,2023-01-20 18:00:00,
+476,6486,Tablet,324.37,2,Accessories,2023-01-20 19:00:00,"27 Main St, City"
+477,9335,Phone,,1,Accessories,2023-01-20 20:00:00,
+478,5980,Phone,1443.91,1,Accessories,2023-01-20 21:00:00,"37 Main St, City"
+479,8266,Phone,724.93,3,Electronics,2023-01-20 22:00:00,"90 Main St, City"
+480,5491,Tablet,1324.65,1,Electronics,2023-01-20 23:00:00,
+481,8192,Headphones,57.46,1,Accessories,2023-01-21 00:00:00,
+482,6588,Tablet,,1,Accessories,2023-01-21 01:00:00,
+483,8651,Laptop,,3,Accessories,2023-01-21 02:00:00,
+484,4636,Tablet,1367.62,2,Accessories,2023-01-21 03:00:00,"71 Main St, City"
+485,2167,Tablet,51.62,4,Accessories,2023-01-21 04:00:00,
+486,2062,Tablet,856.46,2,Accessories,2023-01-21 05:00:00,"15 Main St, City"
+487,3156,Tablet,1147.12,4,Electronics,2023-01-21 06:00:00,
+488,8860,Headphones,425.1,1,Accessories,2023-01-21 07:00:00,"64 Main St, City"
+489,6161,Laptop,330.04,2,Electronics,2023-01-21 08:00:00,"66 Main St, City"
+490,6305,Headphones,171.94,4,Accessories,2023-01-21 09:00:00,"54 Main St, City"
+491,7541,Headphones,523.33,3,Accessories,2023-01-21 10:00:00,
+492,5729,Tablet,861.77,3,Electronics,2023-01-21 11:00:00,
+493,8330,Phone,217.97,2,Electronics,2023-01-21 12:00:00,
+494,6334,Phone,596.21,2,Electronics,2023-01-21 13:00:00,
+495,9924,Headphones,63.15,1,Electronics,2023-01-21 14:00:00,"9 Main St, City"
+496,5330,Headphones,1237.09,2,Accessories,2023-01-21 15:00:00,"99 Main St, City"
+497,9010,Tablet,236.25,1,Electronics,2023-01-21 16:00:00,"44 Main St, City"
+498,7801,Headphones,460.85,1,Accessories,2023-01-21 17:00:00,"1 Main St, City"
+499,5846,Tablet,76.72,3,Electronics,2023-01-21 18:00:00,
+500,7731,Phone,676.75,3,Accessories,2023-01-21 19:00:00,"76 Main St, City"
