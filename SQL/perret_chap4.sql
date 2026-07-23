@@ -71,3 +71,30 @@ SELECT commandes.*, ROUND(moyenne_mensuelle.total_moyen,2) AS total_moyen_mois
 FROM commandes
 INNER JOIN (SELECT EXTRACT(MONTH FROM date_commande) AS mois, AVG(total) AS total_moyen FROM commandes GROUP BY mois) AS moyenne_mensuelle
 	ON moyenne_mensuelle.mois = EXTRACT(MONTH FROM commandes.date_commande) AND commandes.total > moyenne_mensuelle.total_moyen;
+
+-- Q55 : avec une CTE récursive : générer une suite de nombres de 1 à 10 :
+WITH RECURSIVE serie(n) AS (
+	SELECT 1 AS n
+	UNION ALL
+	SELECT n+1 FROM serie WHERE n < 10
+)
+SELECT n FROM serie;
+
+-- Q56 : afficher les emails des clients en majuscules :
+SELECT nom, UPPER(email) AS email FROM clients;
+
+-- Q57 : afficher le nom du produit et le domaine de l'email du client dans la même requête :
+SELECT produits.nom, SPLIT_PART(clients.email,'@',2) AS domaine_email_client
+FROM produits
+INNER JOIN lignes_commande ON lignes_commande.produit_id = produits.produit_id
+INNER JOIN commandes ON commandes.commande_id = lignes_commande.commande_id
+INNER JOIN clients ON commandes.client_id = clients.client_id;
+
+-- Q58 : afficher les commandes passées un lundi :
+SELECT * FROM commandes WHERE EXTRACT(DOW FROM date_commande) = 1;
+
+-- Q59 : catégoriser les produits en 'Pas cher' (<20€), 'Raisonnable' (<100€), 'Cher' :
+SELECT *, CASE WHEN prix < 20 THEN 'Pas cher' WHEN prix < 100 THEN 'Raisonnable' ELSE 'Cher' END AS categorie_prix
+FROM produits;
+
+-- Q60 : afficher les clients avec leur ville, en remplaçant les NULL par 'Ville inconnue' :
