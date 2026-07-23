@@ -98,3 +98,20 @@ SELECT *, CASE WHEN prix < 20 THEN 'Pas cher' WHEN prix < 100 THEN 'Raisonnable'
 FROM produits;
 
 -- Q60 : afficher les clients avec leur ville, en remplaçant les NULL par 'Ville inconnue' :
+SELECT nom, COALESCE(ville,'Ville inconnue') FROM clients;
+
+-- Q61 : afficher le CA par année et par mois sous le format YYYY-MM :
+SELECT TO_CHAR(date_commande, 'YYYY-MM') AS annee_mois, SUM(total) AS CA FROM commandes GROUP BY annee_mois ORDER BY annee_mois ASC;
+
+-- Q62 : afficher le nombre de jours écoulés depuis chaque commande :
+SELECT *, CURRENT_DATE - date_commande AS nb_jours_ecoules FROM commandes;
+
+-- Q63 : afficher les produits dont le nom contient un chiffre :
+SELECT * FROM produits WHERE REGEXP_LIKE(nom,'[0-9]');
+
+-- Q64 : afficher le CA total pour les commandes du dernier trimestre :
+SELECT EXTRACT(YEAR FROM date_commande) AS annee, EXTRACT(QUARTER FROM date_commande) AS trimestre, SUM(total) AS CA_trimestre
+FROM commandes
+GROUP BY annee, trimestre
+ORDER BY annee DESC, trimestre DESC
+LIMIT 1;
