@@ -115,3 +115,6 @@ FROM commandes
 GROUP BY annee, trimestre
 ORDER BY annee DESC, trimestre DESC
 LIMIT 1;
+
+-- Q65 : afficher les initiales de chaque client :
+SELECT nom, CONCAT(LEFT(SPLIT_PART(nom, ' ', 1),1), LEFT(SPLIT_PART(nom, ' ', 2),1)) as initiales FROM clients;
