@@ -21,7 +21,7 @@ SELECT * FROM commandes WHERE statut IN ('livre','expedie');
 SELECT * FROM produits WHERE nom ILIKE '%cable%';
 
 -- Q8 : afficher les clients sans ville renseignée :
-SELECT * FROM clients WHERE ville IS NULL;:
+SELECT * FROM clients WHERE ville IS NULL;
  
 -- Q9 : afficher les produits dont le prix est ente 20 et 100€, triés par prix croissant :
 SELECT * FROM produits WHERE prix BETWEEN 20 AND 100 ORDER BY prix ASC;
@@ -42,4 +42,4 @@ SELECT * FROM produits ORDER BY stock ASC LIMIT 3;
 SELECT * FROM clients WHERE date_inscription > '2022-01-01';
 
 -- Q15 : afficher les commandes dont le total est supérieur à 200€ et le statut à livre :
-SELECT * FROM commandes WHERE total > 100 AND statut = 'livre';
+SELECT * FROM commandes WHERE total > 200 AND statut = 'livre';
