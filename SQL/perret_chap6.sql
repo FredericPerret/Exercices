@@ -211,9 +211,17 @@ WITH bilan_commandes AS (
 	INNER JOIN commandes ON commandes.client_id = clients.client_id
 )
 SELECT * FROM bilan_commandes
-WHERE nb_commandes > 1
+-- WHERE nb_commandes > 1
 ORDER BY nb_commandes DESC, premiere_commande ASC;
 
+SELECT  c.nom,
+        MIN(co.date_commande) AS premiere_commande,
+        MAX(co.date_commande) AS derniere_commande,
+        COUNT(*) AS nb_commandes
+FROM clients c
+JOIN commandes co
+    ON co.client_id = c.client_id
+GROUP BY c.client_id, c.nom;
 
 -- Q25 — Pour chaque commande, afficher :
 --        - son total
