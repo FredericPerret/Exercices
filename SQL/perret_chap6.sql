@@ -177,21 +177,42 @@ INNER JOIN catotal_client ON catotal_client.client_id = clients.client_id;
 --        au mois précédent. Utiliser une CTE + LAG.
 --        Colonnes attendues : mois, ca_mensuel, ca_precedent, variation_pct
 -- Indice : DATE_TRUNC('month', date_commande) pour grouper par mois
- 
-
+WITH ca_mensuel AS (
+	SELECT 	EXTRACT(YEAR FROM date_commande) AS annee,
+			EXTRACT(MONTH FROM date_commande) AS mois,
+			SUM(total) AS ca_mensuel
+			FROM commandes
+			GROUP BY annee, mois
+)
+SELECT annee, mois, ca_mensuel, LAG(ca_mensuel) OVER(ORDER BY annee,mois) AS ca_precedent,
+		ROUND((ca_mensuel - LAG(ca_mensuel,1,0) OVER(ORDER BY annee,mois))/LAG(ca_mensuel,1,ca_mensuel) OVER(ORDER BY annee,mois)*100,2) AS variation_pct
+FROM ca_mensuel;
 
 -- Q23 — Pour chaque produit vendu, afficher la quantité commandée
 --        et la quantité cumulée depuis le début (par produit).
 --        Jointure lignes_commande + produits + commandes nécessaire.
 --        Colonnes attendues : produit, date_commande, quantite, quantite_cumulee
- 
-
+SELECT nom AS produit, date_commande, quantite,
+		SUM(quantite) OVER(PARTITION BY lignes_commande.produit_id ORDER BY date_commande ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS quantite_cumulee
+FROM produits
+INNER JOIN lignes_commande ON lignes_commande.produit_id = produits.produit_id
+INNER JOIN commandes ON commandes.commande_id = lignes_commande.commande_id;
 
 -- Q24 — Identifier la première et la dernière commande de chaque client
 --        en une seule requête. Afficher une ligne par client.
 --        Colonnes attendues : nom, premiere_commande, derniere_commande, nb_commandes
 -- Indice : DISTINCT + FIRST_VALUE + LAST_VALUE + COUNT OVER (PARTITION BY)
- 
+WITH bilan_commandes AS (
+	SELECT	DISTINCT nom,
+			FIRST_VALUE(date_commande) OVER(PARTITION BY commandes.client_id ORDER BY date_commande) AS premiere_commande,
+			LAST_VALUE(date_commande) OVER(PARTITION BY commandes.client_id ORDER BY date_commande ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS derniere_commande,
+			COUNT(commande_id) OVER(PARTITION BY commandes.client_id) AS nb_commandes
+	FROM clients
+	INNER JOIN commandes ON commandes.client_id = clients.client_id
+)
+SELECT * FROM bilan_commandes
+WHERE nb_commandes > 1
+ORDER BY nb_commandes DESC, premiere_commande ASC;
 
 
 -- Q25 — Pour chaque commande, afficher :
@@ -201,3 +222,8 @@ INNER JOIN catotal_client ON catotal_client.client_id = clients.client_id;
 --        - son rang parmi toutes les commandes (RANK par total décroissant)
 --        Colonnes attendues : commande_id, date_commande, total,
 --                             total_prec, ca_cumule, rang_total
+SELECT	commande_id, date_commande, total,
+		LAG(total) OVER(ORDER BY date_commande) AS total_prec,
+		SUM(total) OVER(ORDER BY date_commande ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS ca_cumule,
+		RANK() OVER(ORDER BY total DESC) AS rang_total
+FROM commandes;
