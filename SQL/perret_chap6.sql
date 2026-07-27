@@ -214,14 +214,16 @@ SELECT * FROM bilan_commandes
 -- WHERE nb_commandes > 1
 ORDER BY nb_commandes DESC, premiere_commande ASC;
 
-SELECT  c.nom,
-        MIN(co.date_commande) AS premiere_commande,
-        MAX(co.date_commande) AS derniere_commande,
+SELECT  nom,
+        MIN(date_commande) AS premiere_commande,
+        MAX(date_commande) AS derniere_commande,
         COUNT(*) AS nb_commandes
-FROM clients c
-JOIN commandes co
-    ON co.client_id = c.client_id
-GROUP BY c.client_id, c.nom;
+FROM clients
+JOIN commandes
+    ON commandes.client_id = clients.client_id
+GROUP BY clients.client_id, nom
+-- HAVING COUNT(*) > 1
+ORDER BY nb_commandes DESC, premiere_commande ASC;
 
 -- Q25 — Pour chaque commande, afficher :
 --        - son total
