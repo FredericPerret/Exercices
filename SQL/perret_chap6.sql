@@ -219,8 +219,7 @@ SELECT  nom,
         MAX(date_commande) AS derniere_commande,
         COUNT(*) AS nb_commandes
 FROM clients
-JOIN commandes
-    ON commandes.client_id = clients.client_id
+JOIN commandes ON commandes.client_id = clients.client_id
 GROUP BY clients.client_id, nom
 -- HAVING COUNT(*) > 1
 ORDER BY nb_commandes DESC, premiere_commande ASC;
