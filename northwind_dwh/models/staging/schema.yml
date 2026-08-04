@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: clients
+  - name: stg_customers
     description: "table des clients"
     columns:
       - name: customer_id
@@ -17,7 +17,7 @@ models:
       - name: country
       - name: phone
 
-  - name: commandes
+  - name: stg_orders
     columns:
       - name: order_id
       - name: customer_id
