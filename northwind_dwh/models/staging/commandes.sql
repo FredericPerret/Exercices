@@ -1,6 +1,4 @@
 
-{{ config(materialized='table') }}
-
 SELECT order_id, 
 	   CAST(UPPER(customer_id) AS VARCHAR(5)) AS customer_id, 
 	   employee_id, 
