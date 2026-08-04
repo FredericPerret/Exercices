@@ -1,0 +1,34 @@
+
+version: 2
+
+models:
+  - name: clients
+    description: "table des clients"
+    columns:
+      - name: customer_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: company_name
+      - name: contact_name
+      - name: contact_title
+      - name: city
+      - name: country
+      - name: phone
+
+  - name: commandes
+    columns:
+      - name: order_id
+      - name: customer_id
+      - name: employee_id
+      - name: order_date
+      - name: required_date
+      - name: shipped_date
+      - name: is_shipped
+      - name: ship_via
+      - name: freight
+      - name: ship_name
+      - name: ship_city
+      - name: ship_country
+
