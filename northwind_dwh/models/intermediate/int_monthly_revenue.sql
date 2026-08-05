@@ -1,5 +1,5 @@
 WITH orders_agreg AS (
-	SELECT	CAST(TO_CHAR(DATE_TRUNC('MONTH',order_date),'YYYY-MM') AS CHAR(7)) AS mois,
+	SELECT	CAST(TO_CHAR(order_date,'YYYY-MM') AS CHAR(7)) AS mois,
 			COUNT(*) AS nb_commandes,
 			SUM(montant_total) AS ca_mensuel
 	FROM {{ ref('int_orders_enriched') }}
