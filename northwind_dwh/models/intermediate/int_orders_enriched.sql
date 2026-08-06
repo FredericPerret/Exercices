@@ -17,7 +17,7 @@ SELECT cmd.order_id,
 	   cmd.ship_country,
 	   cmd.freight,
 	   cmd.is_shipped,
-	   cmd.required_date >= COALESCE(cmd.shipped_date,'2500-01-01') AS is_on_time, -- si shipped_date NULL : on veut is_on_time à False
+	   cmd.required_date >= cmd.shipped_date AS is_on_time, -- si shipped_date NULL : on veut is_on_time à False
 	   shipped_date - order_date AS delai_livraison_jours,
 	   lignes_cmd.nb_articles,
 	   lignes_cmd.quantite_total,

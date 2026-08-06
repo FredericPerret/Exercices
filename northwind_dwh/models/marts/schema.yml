@@ -49,12 +49,21 @@ models:
         description: "Pays destinataire de l'expedition"
       - name: freight
         description: "Frais d'expedition"
+        data_tests:
+          - not_null
       - name: is_shipped
         description: "Est expedie"
         data_tests:
           - not_null
       - name: is_on_time
         description: "Expedie avant ou a la date requise"
+# Ce test vérifie que :
+# - is_on_time a ete determine
+# - uniquement pour les commandes expediees (sinon is_on_time n'a pas de sens)
+        data_tests:
+          - not_null:
+              config:
+                where: "is_shipped"
       - name: delai_livraison_jours
         description: "delai entre la date de commande et la date de livraison"
       - name: nb_articles
@@ -72,3 +81,50 @@ models:
       - name: montant_total_avec_frais
         description: "Montant total avec frais d'expedition de la commande"
 
+  - name: dim_products
+    description: "table de dimension des produits"
+    columns:
+      - name: product_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: "Nom du produit"
+        data_tests:
+          - unique
+          - not_null
+      - name: unit_price
+        description: "Prix d'une unite de vente"
+        data_tests:
+          - not_null
+      - name: units_in_stock
+        description: "Nombre d'unites en stock"
+        data_tests:
+          - not_null
+      - name: units_on_order
+        description: "Nombre d'unites commandees au fournisseur"
+      - name: discontinued
+        description: "Produit en rupture d'approvisionnement"
+      - name: category_name
+        description: "Nom de la categorie"
+        data_tests:
+          - not_null
+      - name: category_description
+        description: "Description de la categorie"
+      - name: supplier_name
+        description: "Nom du fournisseur"
+        data_tests:
+          - not_null
+      - name: supplier_country
+        description: "Pays du fournisseur"
+      - name: gamme
+        description: "Gamme du produit"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - "Entrée de gamme"
+                  - "Milieu de gamme"
+                  - "Premium"
