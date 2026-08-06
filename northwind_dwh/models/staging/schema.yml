@@ -1,9 +1,9 @@
 
-version: 2
+version: 2.2
 
 models:
   - name: stg_customers
-    description: "table des clients"
+    description: "table des entreprises clientes"
     columns:
       - name: customer_id
         description: "Cle primaire pour cette table"
@@ -11,24 +11,235 @@ models:
           - unique
           - not_null
       - name: company_name
+        description: "Nom de l'entreprise cliente"
+        data_tests:
+          - unique
+          - not_null
       - name: contact_name
+        description: "Nom du contact de l'entreprise cliente"
       - name: contact_title
+        description: "Poste du contact de l'entreprise cliente"
       - name: city
+        description: "Ville de l'entreprise cliente"
       - name: country
+        description: "Pays de l'entreprise cliente"
       - name: phone
+        description: "N° tel du contact de l'entreprise cliente"
 
   - name: stg_orders
+    description: "table des commandes"
     columns:
       - name: order_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
       - name: customer_id
+        description: "Cle etrangere stg_customers client ayant effectue la commande"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
       - name: employee_id
+        description: "Cle etrangere stg_employees employe ayant traite la commande"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_employees')
+                field: employee_id
       - name: order_date
+        description: "Date de la commande"
+        data_tests:
+          - not_null
       - name: required_date
+        description: "Date de livraison demandee par le client"
+        data_tests:
+          - not_null
       - name: shipped_date
+        description: "Date d'expedition"
       - name: is_shipped
+        description: "Est expedie"
+        data_tests:
+          - not_null
       - name: ship_via
+        description: "Cle etrangere stg_shippers entreprise d'expedition"
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_shippers')
+                field: shipper_id
       - name: freight
-      - name: ship_name
+        description: "Frais d'expedition"
       - name: ship_city
+        description: "Ville destinatrice de l'expedition"
       - name: ship_country
+        description: "Pays destinataire de l'expedition"
 
+  - name: stg_products
+    description: "table des produits"
+    columns:
+      - name: product_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: "Nom du produit"
+        data_tests:
+          - unique
+          - not_null
+      - name: supplier_id
+        description: "Cle etrangere stg_suppliers fournisseur"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_suppliers')
+                field: supplier_id
+      - name: category_id
+        description: "Cle etrangere stg_categories categorie"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_categories')
+                field: category_id
+      - name: quantity_per_unit
+        description: "Quantite de produit par unite de vente"
+        data_tests:
+          - not_null
+      - name: unit_price
+        description: "Prix d'une unite de vente"
+        data_tests:
+          - not_null
+      - name: units_in_stock
+        description: "Nombre d'unites restantes en stock"
+        data_tests:
+          - not_null
+      - name: en_stock
+        description: "Produit encore present en stock"
+        data_tests:
+          - not_null
+      - name: units_on_order
+        description: "Nombre d'unites commandees au fournisseur"
+      - name: discontinued
+        description: "Produit en rupture d'approvisionnement"
+
+  - name: stg_categories
+    description: "table des categories de produits"
+    columns:
+      - name: category_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: category_name
+        description: "Nom de la categorie"
+        data_tests:
+          - unique
+          - not_null
+      - name: description
+        description: "Description de la categorie"
+
+  - name: stg_employees
+    description: "table des employes"
+    columns:
+      - name: employee_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: fullname
+        description: "Nom complet de l'employe"
+        data_tests:
+          - unique
+          - not_null
+      - name: title
+        description: "Poste de l'employe"
+        data_tests:
+          - not_null
+      - name: hire_date
+        description: "Date d'embauche"
+      - name: city
+        description: "Ville de residence de l'employe"
+      - name: country
+        description: "Pays de residence de l'employe"
+
+  - name: stg_order_details
+    description: "table des lignes de commandes"
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "(order_id || '-' || product_id)"
+    columns:
+      - name: order_id
+        description: "Cle etrangere stg_orders commande, membre de la cle primaire"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: product_id
+        description: "Cle etrangere stg_products produit, membre de la cle primaire"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: unit_price
+        description: "Prix unitaire du produit de la ligne de commande"
+        data_tests:
+          - not_null
+      - name: quantity
+        description: "Nombre d'unites de produit commandees"
+        data_tests:
+          - not_null
+      - name: discount
+        description: "Rabais applique (entre 0 et 1)"
+      - name: sous_total
+        description: "Montant total de cette ligne"
+        data_tests:
+          - not_null
+
+  - name: stg_shippers
+    description: "table des entreprises d'expedition"
+    columns:
+      - name: shipper_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: company_name
+        description: "Nom de l'entreprise d'expedition"
+        data_tests:
+          - unique
+          - not_null
+      - name: phone
+        description: "N° tel de l'entreprise d'expedition"
+
+  - name: stg_suppliers
+    description: "table des fournisseurs"
+    columns:
+      - name: supplier_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: company_name
+        description: "Nom du fournisseur"
+        data_tests:
+          - unique
+          - not_null
+      - name: contact_name
+        description: "Nom du contact du fournisseur"
+      - name: city
+        description: "Ville du fournisseur"
+      - name: country
+        description: "Pays du fournisseur"
+      - name: phone
+        description: "N° tel du fournisseur"
