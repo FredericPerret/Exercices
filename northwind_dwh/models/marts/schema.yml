@@ -1,0 +1,74 @@
+
+version: 2.2
+
+models:
+  - name: fact_orders
+    description: "table des faits commandes"
+    columns:
+      - name: order_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Cle etrangere dim_customers client ayant effectue la commande"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+      - name: employee_id
+        description: "Cle etrangere dim_employees employe ayant traite la commande"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_employees')
+                field: employee_id
+      - name: ship_via
+        description: "Cle etrangere dim_shippers entreprise d'expedition"
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_shippers')
+                field: shipper_id
+      - name: order_date
+        description: "Date de la commande"
+        data_tests:
+          - not_null
+      - name: required_date
+        description: "Date de livraison demandee par le client"
+        data_tests:
+          - not_null
+      - name: shipped_date
+        description: "Date d'expedition"
+      - name: ship_city
+        description: "Ville destinatrice de l'expedition"
+      - name: ship_country
+        description: "Pays destinataire de l'expedition"
+      - name: freight
+        description: "Frais d'expedition"
+      - name: is_shipped
+        description: "Est expedie"
+        data_tests:
+          - not_null
+      - name: is_on_time
+        description: "Expedie avant ou a la date requise"
+      - name: delai_livraison_jours
+        description: "delai entre la date de commande et la date de livraison"
+      - name: nb_articles
+        description: "Nombre de produits de la commande"
+        data_tests:
+          - not_null
+      - name: quantite_total
+        description: "Nombre d'unites de produits de la commande"
+        data_tests:
+          - not_null
+      - name: montant_total
+        description: "Montant total hors frais d'expedition de la commande"
+        data_tests:
+          - not_null
+      - name: montant_total_avec_frais
+        description: "Montant total avec frais d'expedition de la commande"
+
