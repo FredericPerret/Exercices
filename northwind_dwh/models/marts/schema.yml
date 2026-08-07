@@ -81,6 +81,63 @@ models:
       - name: montant_total_avec_frais
         description: "Montant total avec frais d'expedition de la commande"
 
+  - name: fact_orders_lines
+    description: "table des faits lignes de commandes"
+    columns:
+      - name: order_id
+        description: "Identifiant de la commande"
+        data_tests:
+          - not_null
+      - name: product_id
+        description: "Cle etrangere dim_products produit commande"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_id
+      - name: customer_id
+        description: "Cle etrangere dim_customers client ayant effectue la commande"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+      - name: employee_id
+        description: "Cle etrangere dim_employees employe ayant traite la commande"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_employees')
+                field: employee_id
+      - name: ship_via
+        description: "Cle etrangere dim_shippers entreprise d'expedition"
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_shippers')
+                field: shipper_id
+      - name: order_date
+        description: "Date de la commande"
+        data_tests:
+          - not_null
+      - name: quantity
+        description: "Quantite de produits de la ligne de commande"
+        data_tests:
+          - not_null
+      - name: unit_price
+        description: "Prix unitaire de la ligne de commande"
+        data_tests:
+          - not_null
+      - name: discount
+        description: "Remise sur la ligne de commande"
+      - name: sous_total
+        description: "Total de la ligne de commande"
+        data_tests:
+          - not_null
+
   - name: dim_products
     description: "table de dimension des produits"
     columns:
@@ -128,3 +185,98 @@ models:
                   - "Entrée de gamme"
                   - "Milieu de gamme"
                   - "Premium"
+
+  - name: dim_customers
+    description: "table de dimension des clients"
+    columns:
+      - name: customer_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: company_name
+        description: "Nom de l'entreprise"
+        data_tests:
+          - unique
+          - not_null
+      - name: contact_name
+        description: "Nom du contact"
+      - name: contact_title
+        description: "Poste du contact"
+      - name: city
+        description: "Ville"
+      - name: country
+        description: "Pays"
+      - name: phone
+        description: "Numero de telephone"
+
+  - name: dim_employees
+    description: "table de dimension des employes"
+    columns:
+      - name: employee_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: fullname
+        description: "Nom complet"
+        data_tests:
+          - not_null
+      - name: title
+        description: "Poste de l'employe"
+        data_tests:
+          - not_null
+      - name: hire_date
+        description: "Date d'embauche"
+        data_tests:
+          - not_null
+      - name: city
+        description: "Ville de residence"
+      - name: country
+        description: "Pays de residence"
+
+  - name: dim_shippers
+    description: "table de dimension des expediteurs"
+    columns:
+      - name: shipper_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: company_name
+        description: "Nom de l'entreprise d'expedition"
+        data_tests:
+          - unique
+          - not_null
+      - name: phone
+        description: "Numero de telephone"
+
+  - name: dim_temps
+    description: "table calendrier des commandes"
+    columns:
+      - name: date_id
+        description: "Cle primaire pour cette table"
+        data_tests:
+          - unique
+          - not_null
+      - name: jour
+        description: "Jour du mois"
+        data_tests:
+          - not_null
+      - name: mois
+        data_tests:
+          - not_null
+      - name: annee
+        data_tests:
+          - not_null
+      - name: trimestre
+        data_tests:
+          - not_null
+      - name: annee_mois
+        description: "Concatene annee et mois"
+        data_tests:
+          - not_null
+      - name: est_weekend
+        description: "Indique si le jour est un weekend"
+        data_tests:
+          - not_null
