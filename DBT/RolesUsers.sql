@@ -25,6 +25,7 @@ GRANT CREATE, SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA dbt_dev TO 
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO northwind_dbt;
 GRANT USAGE ON SCHEMA dbt_dev TO northwind_dbt;
 GRANT USAGE ON SCHEMA public TO northwind_dbt;
+GRANT CREATE ON DATABASE northwind TO northwind_dbt;
 
 CREATE USER analyste_dbt WITH PASSWORD 'analyste123';
 GRANT northwind_readonly TO analyste_dbt;
