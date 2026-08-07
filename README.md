@@ -1,1 +1,1 @@
-Branche pour tous les rendus sauf les projets DBT (branche master)
+Branche pour tous les rendus sauf les projets DBT (branche DBT)
