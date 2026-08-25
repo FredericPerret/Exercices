@@ -1,0 +1,1 @@
+docker run -d --name artisell_postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=artisell -p 5433:5432 postgres
