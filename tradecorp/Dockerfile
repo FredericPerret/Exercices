@@ -4,6 +4,7 @@ USER root
 
 RUN pip install --no-cache-dir \
     azure-identity \
+	azure-storage-blob \
     azure-keyvault-secrets
 
 ADD https://jdbc.postgresql.org/download/postgresql-42.7.8.jar /opt/spark/jars/
