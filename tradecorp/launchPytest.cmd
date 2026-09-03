@@ -1,0 +1,1 @@
+docker exec spark-notebook spark-submit --conf "spark.log.level=WARN" /home/jovyan/run_pytest.py tests/test_clean_orders.py
