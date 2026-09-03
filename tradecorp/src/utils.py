@@ -9,19 +9,19 @@ class ClientBlobAzure:
         storage_account = getenv("AZURE_TENANT_ID")
         client_secret = getenv("AZURE_CLIENT_SECRET")
         account_url = f"https://{storage_account}.blob.core.windows.net"
-        self.blob_service_client = BlobServiceClient(account_url, credential=client_secret)
+        self.__blob_service_client = BlobServiceClient(account_url, credential=client_secret)
     
     def getFileFromBlob(self, container_name, blob_name, download_file_path):
         # téléchargement du fichier blob_name du conteneur container_name vers le fichier local download_file_path
         # le fichier local est écrasé s'il existe déjà
-        blob_client = self.blob_service_client.get_blob_client(container=container_name, blob=blob_name)
+        blob_client = self.__blob_service_client.get_blob_client(container=container_name, blob=blob_name)
         with open(download_file_path, "wb") as download_file:
             download_file.write(blob_client.download_blob().readall())
 
     def getDirectoryFromBlob(self, container_name, blob_name, download_dir_path):
         # téléchargement de toute l'arborescence relative sous blob_name du conteneur container_name vers le répertoire local download_dir_path
         # l'éventuel ancien contenu de download_dir_path est supprimé avant le téléchargement
-        container_client = self.blob_service_client.get_container_client(container_name)
+        container_client = self.__blob_service_client.get_container_client(container_name)
         rmtree(download_dir_path, ignore_errors=True)
         makedirs(download_dir_path, exist_ok=True)
         blob_list = container_client.list_blobs(name_starts_with=blob_name)
@@ -37,7 +37,7 @@ class ClientBlobAzure:
     def putDirectoryToBlob(self, container_name, blob_name, upload_file_path):
         # upload de toute l'arborescence relative sous upload_file_path vers le répertoire blob_name du conteneur container_name
         # l'éventuel ancien contenu de blob_name est supprimé avant l'upload
-        container_client = self.blob_service_client.get_container_client(container_name)
+        container_client = self.__blob_service_client.get_container_client(container_name)
         blob_list = container_client.list_blobs(name_starts_with=blob_name)
         for blob in blob_list:
             container_client.delete_blob(blob.name)
@@ -46,7 +46,7 @@ class ClientBlobAzure:
             for file_name in files:
                 local_path = join(root, file_name)
                 blob_path = relpath(local_path, start=upload_file_path).replace("\\", "/")
-                blob_client = self.blob_service_client.get_blob_client(container=container_name, blob=blob_name+'/'+blob_path)
+                blob_client = self.__blob_service_client.get_blob_client(container=container_name, blob=blob_name+'/'+blob_path)
                 with open(local_path, "rb") as data:
                     blob_client.upload_blob(data, overwrite=True)
 
