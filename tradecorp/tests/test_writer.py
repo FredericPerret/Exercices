@@ -6,7 +6,7 @@ sys.path.append("/home/jovyan/src")
 from reader import reader
 from transformer import transformer
 from writer import writer
-from utils import ClientBlobAzure
+from clientBlobAzure import ClientBlobAzure
 
 def test_writer():
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()

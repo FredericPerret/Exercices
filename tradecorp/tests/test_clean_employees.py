@@ -4,7 +4,8 @@ from pyspark.sql.functions import trim, initcap, upper, col, round, lit, concat
 
 sys.path.append("/home/jovyan/src")
 
-from utils import clean_employees, ClientBlobAzure
+from utils import clean_employees
+from clientBlobAzure import ClientBlobAzure
 
 def test_clean_employees():
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()

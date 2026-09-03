@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("/home/jovyan/src")
 
-from utils import ClientBlobAzure
+from clientBlobAzure import ClientBlobAzure
 
 def writer(df_orders_enriched):
     # Write the enriched orders DataFrame to a parquet file
