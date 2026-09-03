@@ -18,4 +18,4 @@ def test_clean_order_details():
     df1 = df_cleaned.select("quantite")
     df2 = df_raw.select("quantity").withColumnRenamed("quantity", "quantite")
     assert df1.subtract(df2).count() == 0
-    assert df_cleaned.filter(col("sous_total") > 0).count() == df_cleaned.count()
+    assert df_cleaned.filter(col("sous_total") == round(col("prix_unitaire")*col("quantite")*(1-col("discount")),2)).count() == df_cleaned.count()

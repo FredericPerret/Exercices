@@ -4,7 +4,15 @@ from os import getenv, walk, makedirs
 from os.path import join, relpath, dirname
 from shutil import rmtree
 
-class ClientBlobAzure:
+class ClientBlobAzure: # classe singleton pour gérer la connexion au service Azure Blob Storage
+    _instance = None
+
+    def __new__(cls):
+        # If no instance exists, create one
+        if cls._instance is None:
+            cls._instance = super(ClientBlobAzure, cls).__new__(cls)
+        return cls._instance
+
     def __init__(self):
         storage_account = getenv("AZURE_TENANT_ID")
         client_secret = getenv("AZURE_CLIENT_SECRET")
@@ -50,6 +58,7 @@ class ClientBlobAzure:
                 with open(local_path, "rb") as data:
                     blob_client.upload_blob(data, overwrite=True)
 
+# fonctions de nettoyage :
 
 def clean_customers(df):
     # Remove duplicates based on 'customer_id'
@@ -86,6 +95,8 @@ def clean_products(df):
     # unit_price est déjà au bon format, donc pas besoin de le convertir
     df_products_clean = df.withColumn("en_stock",col("units_in_stock")>0)
     return df_products_clean
+
+# fonction d'enrichissement pour le clean :
 
 def build_enriched(dfs):
     df_products_categories = dfs["products"].join(dfs["categories"].select("category_id","category_name"), on="category_id", how="inner")
