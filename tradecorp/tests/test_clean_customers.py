@@ -4,11 +4,12 @@ from pyspark.sql.functions import trim, initcap, upper, col, round, lit, concat
 
 sys.path.append("/home/jovyan/src")
 
-from utils import clean_customers, getFileFromBlob
+from utils import clean_customers, ClientBlobAzure
 
 def test_clean_customers():
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()
-    getFileFromBlob("raw", "TradeCorp/customers.csv", f"/home/jovyan/work/data/tmp/customers.csv")
+    client = ClientBlobAzure()
+    client.getFileFromBlob("raw", "TradeCorp/customers.csv", "/home/jovyan/work/data/tmp/customers.csv")
     df_raw = spark.read.csv("/home/jovyan/work/data/tmp/customers.csv", header=True, inferSchema=True)
     df_cleaned = clean_customers(df_raw)
     assert df_cleaned.count() == df_raw.dropDuplicates(["customer_id"]).count()

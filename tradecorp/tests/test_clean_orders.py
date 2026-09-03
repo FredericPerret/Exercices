@@ -4,11 +4,12 @@ from pyspark.sql.functions import trim, initcap, upper, col, round, lit, concat
 
 sys.path.append("/home/jovyan/src")
 
-from utils import clean_orders, getFileFromBlob
+from utils import clean_orders, ClientBlobAzure
 
 def test_clean_orders():
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()
-    getFileFromBlob("raw", "TradeCorp/orders.csv", f"/home/jovyan/work/data/tmp/orders.csv")
+    client = ClientBlobAzure()
+    client.getFileFromBlob("raw", "TradeCorp/orders.csv", "/home/jovyan/work/data/tmp/orders.csv")
     df_raw = spark.read.csv("/home/jovyan/work/data/tmp/orders.csv", header=True, inferSchema=True)
     df_cleaned = clean_orders(df_raw)
     assert df_cleaned.count() == df_raw.filter(col("shipped_date").isNotNull()).count()
