@@ -4,7 +4,7 @@ from shutil import rmtree
 
 sys.path.append("/home/jovyan/src")
 
-from reader import reader
+from reader import reader, reader_clean
 from transformer import transformer
 from writer import writer
 from clientBlobAzure import ClientBlobAzure
@@ -24,3 +24,4 @@ def test_writer():
     assert df_orders_enriched_ld.subtract(df_orders_enriched).count() == 0
     assert df_orders_enriched.subtract(df_orders_enriched_ld).count() == 0
     rmtree(parquet_file)
+    reader_clean()
