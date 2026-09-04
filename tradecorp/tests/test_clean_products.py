@@ -1,4 +1,5 @@
 import sys
+from os import remove
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import trim, initcap, upper, col, round, lit, concat
 
@@ -9,9 +10,11 @@ from clientBlobAzure import ClientBlobAzure
 
 def test_clean_products():
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()
+    csvfile = "/home/jovyan/work/data/tmp/products.csv"
     client = ClientBlobAzure()
-    client.getFileFromBlob("raw", "TradeCorp/products.csv", "/home/jovyan/work/data/tmp/products.csv")
-    df_raw = spark.read.csv("/home/jovyan/work/data/tmp/products.csv", header=True, inferSchema=True)
+    client.getFileFromBlob("raw", "TradeCorp/products.csv", csvfile)
+    df_raw = spark.read.csv(csvfile, header=True, inferSchema=True)
     df_cleaned = clean_products(df_raw)
     assert df_cleaned.count() == df_raw.count()
     assert df_cleaned.filter(col("en_stock") == True).count() == df_cleaned.filter(col("units_in_stock") > 0).count()
+    remove(csvfile)

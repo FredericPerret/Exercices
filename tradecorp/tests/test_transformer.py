@@ -7,7 +7,7 @@ from reader import reader
 from transformer import transformer
 
 def test_transformer():
-    dfs_raw = reader()
+    dfs_raw, df_country_rate = reader()
     dfs_cleaned, df_orders_enriched = transformer(dfs_raw)
     assert df_orders_enriched.count() == dfs_cleaned["order_details"].join(dfs_cleaned["orders"], on="order_id", how="inner").count()
     list_col = {"order_id":"int","customer_id":"string","employee_id":"int","product_id":"int","order_date":"date","required_date":"date",\
