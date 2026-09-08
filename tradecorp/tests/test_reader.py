@@ -1,14 +1,17 @@
 import sys
+from pyspark.sql import SparkSession
 
 sys.path.append("/home/jovyan/src")
 
 from reader import reader
 
 def test_reader():
-    dfs_raw, df_country_rate = reader()
-    assert len(dfs_raw) == 8
+    reader()
+    data_tmp_dir = "/home/jovyan/work/data/tmp"
+    spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()
     for file in ["categories", "products", "orders", "customers", "employees", "order_details", "suppliers", "shippers"]:
-        assert file in dfs_raw
-        assert dfs_raw[file].count() > 0
+        df = spark.read.csv(f"{data_tmp_dir}/raw/{file}.csv", header=True, inferSchema=True)
+        assert df.count() > 0
+    df_country_rate = spark.read.parquet(f"{data_tmp_dir}/silver/country_rate.parquet")
     assert df_country_rate.count() > 0
     assert df_country_rate.columns == ["country", "currency", "rate"]

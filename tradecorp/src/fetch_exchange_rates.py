@@ -1,13 +1,15 @@
 import sys
 import requests
 from os import remove
+from os.path import dirname, abspath
 
-sys.path.append("/home/jovyan/src")
+PROJECTDIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECTDIR+"/src")
 
 from clientBlobAzure import ClientBlobAzure
 
 jsonname = "exchange_rates.json"   
-ficjson = "/home/jovyan/work/data/tmp/" + jsonname
+ficjson = PROJECTDIR + "/data/tmp/" + jsonname
 response = requests.get('https://api.exchangerate-api.com/v4/latest/USD')
 data = response.json()
 fd = open(ficjson, "w")

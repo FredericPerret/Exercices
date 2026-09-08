@@ -10,7 +10,7 @@ def test_enrichment():
     spark = SparkSession.builder.appName("TestEnrichment").getOrCreate()
     parquet_dir = "/home/jovyan/work/data/tmp/enriched_orders_ld.parquet"
     client = ClientBlobAzure()
-    client.getDirectoryFromBlob("clean", "TradeCorp/enriched_orders.parquet", parquet_dir)
+    client.getDirectoryFromBlob("clean", "TradeCorp/orders_enriched.parquet", parquet_dir)
     df_orders_enriched = spark.read.parquet(parquet_dir)
     df_orders_enriched = df_orders_enriched.drop("currency", "sous_total_local")  # Drop the columns to test enrichment
     countries = [row.customer_country for row in df_orders_enriched.select("customer_country").distinct().collect()]

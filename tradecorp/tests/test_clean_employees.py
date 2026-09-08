@@ -10,7 +10,7 @@ from clientBlobAzure import ClientBlobAzure
 
 def test_clean_employees():
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()
-    csvfile = "/home/jovyan/work/data/tmp/employees.csv"
+    csvfile = "/home/jovyan/work/data/tmp/raw/employees.csv"
     client = ClientBlobAzure()
     client.getFileFromBlob("raw", "TradeCorp/employees.csv", csvfile)
     df_raw = spark.read.csv(csvfile, header=True, inferSchema=True)

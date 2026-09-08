@@ -1,7 +1,8 @@
 from azure.storage.blob import BlobServiceClient
 from os import getenv, walk, makedirs
-from os.path import join, relpath, dirname
+from os.path import join, relpath, dirname, abspath
 from shutil import rmtree
+from dotenv import load_dotenv
 
 class ClientBlobAzure: # classe singleton pour gérer la connexion au service Azure Blob Storage
     _instance = None
@@ -13,6 +14,8 @@ class ClientBlobAzure: # classe singleton pour gérer la connexion au service Az
         return cls._instance
 
     def __init__(self):
+        project_dir = dirname(dirname(abspath(__file__)))
+        load_dotenv(project_dir+'/.env')
         storage_account = getenv("AZURE_TENANT_ID")
         client_secret = getenv("AZURE_CLIENT_SECRET")
         account_url = f"https://{storage_account}.blob.core.windows.net"

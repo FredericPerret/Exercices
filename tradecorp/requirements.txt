@@ -3,3 +3,4 @@ azure-storage-blob
 azure-keyvault-secrets
 requests
 pytest
+python-dotenv

@@ -1,16 +1,17 @@
 import sys
-from shutil import rmtree
+from os.path import dirname, abspath
 
-sys.path.append("/home/jovyan/src")
+PROJECTDIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECTDIR+"/src")
 
 from clientBlobAzure import ClientBlobAzure
 
-def writer(df_orders_enriched):
+def writer():
     # Ecrit le DataFrame dans un fichier parquet local et le charge ensuite dans Azure Blob Storage
-    parquet_name = "enriched_orders.parquet"
-    tmp_local_parquet = "/home/jovyan/work/data/tmp/" + parquet_name
-    df_orders_enriched.write.mode("overwrite").parquet(tmp_local_parquet)
+    parquet_name = "orders_enriched.parquet"
+    tmp_local_parquet = PROJECTDIR + "/data/tmp/clean/" + parquet_name
     client = ClientBlobAzure()
     client.putDirectoryToBlob("clean", "TradeCorp/"+parquet_name, tmp_local_parquet)
-    # A ce stade, on peut supprimer le fichier parquet local
-    rmtree(tmp_local_parquet)
+
+if __name__ == "__main__":
+    writer()
