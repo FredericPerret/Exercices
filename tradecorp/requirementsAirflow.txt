@@ -1,0 +1,5 @@
+apache-airflow-providers-docker
+azure-identity
+azure-storage-blob
+azure-keyvault-secrets
+python-dotenv
