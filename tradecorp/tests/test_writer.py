@@ -1,8 +1,10 @@
 import sys
 from pyspark.sql import SparkSession
 from shutil import rmtree
+from os.path import dirname, abspath
 
-sys.path.append("/home/jovyan/src")
+PROJECTDIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECTDIR+"/src")
 
 from reader import reader
 from transformer import transformer
@@ -17,8 +19,8 @@ def test_writer():
     # exécution de la fonction writer pour écrire le dataframe de test dans un fichier parquet sous Azure Blob Storage
     writer()
     # on récupère le fichier parquet écrit dans Azure Blob Storage et on le lit pour vérifier qu'il est identique au dataframe initial
-    parquet_file = "/home/jovyan/work/data/tmp/clean/orders_enriched.parquet"
-    test_parquet_file = "/home/jovyan/work/data/tmp/orders_enriched_ld.parquet"
+    parquet_file = PROJECTDIR+"/data/tmp/clean/orders_enriched.parquet"
+    test_parquet_file = PROJECTDIR+"/data/tmp/orders_enriched_ld.parquet"
     client = ClientBlobAzure()
     client.getDirectoryFromBlob("clean", "TradeCorp/orders_enriched.parquet", test_parquet_file)
     df_orders_enriched = spark.read.parquet(parquet_file)

@@ -1,7 +1,9 @@
 import sys
 from pyspark.sql import SparkSession
+from os.path import dirname, abspath
 
-sys.path.append("/home/jovyan/src")
+PROJECTDIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECTDIR+"/src")
 
 from reader import reader
 from transformer import transformer
@@ -9,7 +11,7 @@ from transformer import transformer
 def test_transformer():
     reader()
     transformer()
-    data_tmp_dir = "/home/jovyan/work/data/tmp"
+    data_tmp_dir = PROJECTDIR + "/data/tmp"
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()
     df_orders_enriched = spark.read.parquet(f"{data_tmp_dir}/clean/orders_enriched.parquet")
     list_col = {"order_id":"int","customer_id":"string","employee_id":"int","product_id":"int","order_date":"date","required_date":"date",\

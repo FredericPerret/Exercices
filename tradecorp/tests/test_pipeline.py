@@ -1,7 +1,9 @@
 import sys
 from pyspark.sql import SparkSession
+from os.path import dirname, abspath
 
-sys.path.append("/home/jovyan/src")
+PROJECTDIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECTDIR+"/src")
 
 from reader import reader
 from transformer import transformer
@@ -11,7 +13,7 @@ from clientBlobAzure import ClientBlobAzure
 def test_pipeline():
     pipeline()
     client = ClientBlobAzure()
-    parquet_dir = "/home/jovyan/work/data/tmp/orders_enriched_ld.parquet"
+    parquet_dir = PROJECTDIR + "/data/tmp/orders_enriched_ld.parquet"
     client.getDirectoryFromBlob("clean", "TradeCorp/orders_enriched.parquet", parquet_dir)
     spark = SparkSession.builder.appName("TestPipeline").getOrCreate()
     df_orders_enriched = spark.read.parquet(parquet_dir)

@@ -1,6 +1,9 @@
 import sys
 from shutil import rmtree
-sys.path.append("/home/jovyan/src")
+from os.path import dirname, abspath
+
+PROJECTDIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECTDIR+"/src")
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, round
 from enrichment import enrichment
@@ -8,7 +11,7 @@ from clientBlobAzure import ClientBlobAzure
 
 def test_enrichment():
     spark = SparkSession.builder.appName("TestEnrichment").getOrCreate()
-    parquet_dir = "/home/jovyan/work/data/tmp/enriched_orders_ld.parquet"
+    parquet_dir = PROJECTDIR + "/data/tmp/enriched_orders_ld.parquet"
     client = ClientBlobAzure()
     client.getDirectoryFromBlob("clean", "TradeCorp/orders_enriched.parquet", parquet_dir)
     df_orders_enriched = spark.read.parquet(parquet_dir)

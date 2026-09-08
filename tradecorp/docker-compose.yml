@@ -10,7 +10,6 @@ services:
     volumes:
       - ./notebooks:/home/jovyan/work
       - ./data:/home/jovyan/data
-      - ./data/tmp:/home/jovyan/work/data/tmp
       - ./src:/home/jovyan/src
       - ./tests:/home/jovyan/tests
     environment:

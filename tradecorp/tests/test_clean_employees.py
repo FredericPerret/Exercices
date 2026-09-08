@@ -2,15 +2,17 @@ import sys
 from os import remove
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import trim, initcap, upper, col, round, lit, concat
+from os.path import dirname, abspath
 
-sys.path.append("/home/jovyan/src")
+PROJECTDIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECTDIR+"/src")
 
 from utils import clean_employees
 from clientBlobAzure import ClientBlobAzure
 
 def test_clean_employees():
     spark = SparkSession.builder.appName("TradeCorpETL").getOrCreate()
-    csvfile = "/home/jovyan/work/data/tmp/raw/employees.csv"
+    csvfile = PROJECTDIR + "/data/tmp/raw/employees.csv"
     client = ClientBlobAzure()
     client.getFileFromBlob("raw", "TradeCorp/employees.csv", csvfile)
     df_raw = spark.read.csv(csvfile, header=True, inferSchema=True)
