@@ -1,0 +1,23 @@
+Paragraphe 1.2 :
+Q3  : 8 (nombre écrit dans le titre de l'onglet)
+Q4  : Le Petit Prince
+Q5  : George Orwell
+Q6  : Le premier livre à auteurs multiples est Guide de survie en forêt
+Q7  : Ce livre a 3 chapitres : Orientation, Feu, Abri
+Q8  : Le document le plus ancien est l'étranger de Camus (1942)
+Q9  : Le document le plus récent est Guide de survie en forêt (2020) (la modernité n'a pas toujours du bon ...)
+Q10 : Seul le document Guide de survie en forêt a un champ illustrations (maintenant il faut ça pour que les gens comprennent ...)
+
+Paragraphe 1.3 :
+Q11 : filtre {annee: 1951} : Fondation de Isaac Asimov
+Q12 : filtre {annee: {$gt: 2000}} : 3 documents
+Q13 : filtre {annee: {$lt: 1950}} : 3 documents
+Q14 : filtre {chapitres: {$elemMatch: {$eq: "Feu"}}} : Guide de survie en forêt
+Q15 : filtre {auteur: "George Orwell"} : 1984
+
+Paragraphe 1.4 :
+Q16 : ajout du champ note au document Dune via le bouton {} puis le bouton Edit (crayon), enfin le bouton REPLACE
+Q17 : après navigation dans d'autres bases puis retour dans la base courante, le champ est toujours là
+Q18 : bouton ADD DATA / Insert document (titre, annee, auteur), l'_id est attribué automatiquement : Cent Ans de solitude de Gabriel Garcia Marquez paru en 1967
+Q19 : le nombre de documents (dans le titre de l'onglet) indique bien 9
+Q20 : après suppression du document Guide de survie en forêt (qui faisait tâche dans celle collection), le nombre de documents repasse bien à 8
