@@ -28,7 +28,6 @@ print(commande_json)
 
 from azure.eventhub import EventHubProducerClient, EventData, TransportType
 
-CONNECTION_STRING = "Endpoint=sb://fredeventhub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xxxx"
 EVENT_HUB_NAME = "commandes"
 
 producer = EventHubProducerClient.from_connection_string(
