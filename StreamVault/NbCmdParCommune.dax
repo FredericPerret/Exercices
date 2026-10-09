@@ -1,0 +1,11 @@
+EVALUATE
+SELECTCOLUMNS(
+    SUMMARIZECOLUMNS(
+        Clients[commune],
+        "Nombre de commandes", COUNTROWS(Commandes),
+        "Montant total", SUM(Commandes[price])
+    ),
+    "Commune", Clients[commune],
+    "Nombre de commandes", [Nombre de commandes],
+    "Montant total", [Montant total]
+)

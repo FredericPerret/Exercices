@@ -1,0 +1,11 @@
+EVALUATE
+SELECTCOLUMNS(
+    SUMMARIZECOLUMNS(
+        FilmsGenres[genres],
+        "Nombre de films", COUNTROWS(FilmsGenres),
+        "Note moyenne", AVERAGE(FilmsGenres[note_imdb])
+    ),
+    "Genre", FilmsGenres[genres],
+    "Nombre de films", [Nombre de films],
+    "Note moyenne", [Note moyenne]
+) ORDER BY [Nombre de films] DESC

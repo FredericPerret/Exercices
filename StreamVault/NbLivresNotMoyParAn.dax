@@ -1,0 +1,15 @@
+EVALUATE
+SELECTCOLUMNS(
+    SUMMARIZECOLUMNS(
+        Livres[year],
+        FILTER(
+            Livres,
+            Livres[year] >= 1900 && Livres[year] <= 2025
+        ),
+        "Nombre de livres", COUNTROWS(Livres),
+        "Note moyenne", AVERAGE(Livres[note])
+    ),
+    "Annee", Livres[year],
+    "Nombre de livres", [Nombre de livres],
+    "Note moyenne", [Note moyenne]
+) ORDER BY [Annee]
