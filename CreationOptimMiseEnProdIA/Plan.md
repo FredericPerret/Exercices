@@ -54,10 +54,10 @@ Les étapes et les tâches associées présentées dans ce document ont été d�
 | T1.2 | modele.ipynb données nettoyées | modele.ipynb données train / test / prod | 1 | 0.5 |
 | T1.3 | modele.ipynb données train / test / prod | modele.ipynb train, test, prod vectorisées | 1 | 0.5 |
 | T1.4 | modele.ipynb train, test, prod vectorisées | modele.ipynb résultats 3 modèles 5 graines | 2 | 1 |
-| T1.5 | modele.ipynb résultats 3 modèles 5 graines | modele.ipynb réglage optimal KerasTuner sur meilleur modèle | 2 | |
-| T1.6 | modele.ipynb résultats 3 modèles 5 graines | modele.ipynb réglage optimal Optuna sur meilleur modèle | 2 | |
-| T1.7 | modele.ipynb réglage optimal KerasTuner et Optuna sur meilleur modèle | modele.ipynb  hyperparamètres optimaux évalués sur tests | 2 | |
-| T1.8 | modele.ipynb modèle optimal évalué | modele.keras, vectoriseur.joblib, metrics.json, reference.csv dans répertoire model| 2| |
+| T1.5 | modele.ipynb résultats 3 modèles 5 graines | modele.ipynb réglage optimal KerasTuner sur meilleur modèle | 2 |  1|
+| T1.6 | modele.ipynb résultats 3 modèles 5 graines | modele.ipynb réglage optimal Optuna sur meilleur modèle | 2 | 1  |
+| T1.7 | modele.ipynb réglage optimal KerasTuner et Optuna sur meilleur modèle | modele.ipynb  hyperparamètres optimaux évalués sur tests | 1 | 0.5 |
+| T1.8 | modele.ipynb modèle optimal évalué | modele.keras, vectoriseur.joblib, metrics.json, reference.csv dans répertoire model| 2| 1 |
 |T2.1 | répertoire model avec les 4 fichiers |  API accessible en local avec /health et /predict | 3 | |
 | T2.2 | API accessible en local | résultats tests testsAPI.md  | 1 | |
 | T2.3 | API accessible en local testée manuellement | répertoire testsAuto avec tous les tests .py exécutables via pytest | 3 | |
