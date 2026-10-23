@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "f1_test": 0.853975832205865,
+    "taille_test": 469,
+    "versions": {
+        "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+        "numpy": "2.5.0",
+        "scikit-learn": "1.9.0",
+        "tensorflow": "2.22.0-rc0",
+        "keras": "3.15.1"
+    }
+}
