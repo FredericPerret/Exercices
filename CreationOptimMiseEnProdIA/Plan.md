@@ -67,8 +67,8 @@ Les étapes et les tâches associées présentées dans ce document ont été d�
 | T2.7 | API avec barrière, répertoire tests | workflow GitHub Actions avec jobs test et image | 3 |2 |
 | T2.8 | workflow avec les deux jobs | résultats tests testsAPI.md | 1 |0.5 |
 | T2.9 | accès Azure | registre de conteneurs rempli | 1 | 0.5 |
-| T2.10 | registre conteneurs rempli | job publier ajouté au workflow | 2 |  0.5|
-| T2.11 | job publier fonctionnel | résultats tests testsAPI.md | 1 | |
+| T2.10 | registre conteneurs rempli | job publier ajouté au workflow | 2 |  1|
+| T2.11 | job publier fonctionnel | résultats tests testsAPI.md | 1 | 0.5 |
 | T2.12 | workflow complet fonctionnel | résultats tests testsAPI.md | 1 | |
 | T2.13 | publication complète réussie | PROCEDURE_MISE_EN_PRODUCTION.md | 3 | |
 | T2.14 | Azure Cost Calculator | FIN_DE_VIE.md | 1 | |
