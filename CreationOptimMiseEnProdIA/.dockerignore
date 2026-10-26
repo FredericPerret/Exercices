@@ -1,0 +1,26 @@
+# Données d'entraînement
+textes_films_horreur_comedie.csv
+
+# Documents brief
+*.pdf
+*.md
+
+# Tests automatiques
+tests/
+.pytest_cache/
+
+# Notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Git
+.git/
+.gitignore
+
+# optimisation KeraTuner
+kt_tp6/
