@@ -58,3 +58,39 @@ jobs:
 
           docker logs api-films
           exit 1
+
+      - name: Sauvegarde de l'image Docker
+        run: docker save api-films -o api-films.tar
+
+      - name: Transmission de l'image au job suivant
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-films
+          path: api-films.tar
+
+  publier:
+    needs: img
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupération de l'image
+        uses: actions/download-artifact@v4
+        with:
+          name: api-films
+
+      - name: Chargement de l'image Docker
+        run: docker load -i api-films.tar
+
+      - name: Connexion au registre Azure
+        run: |
+          echo "${{ secrets.ACR_PASSWORD }}" | docker login ${{ secrets.ACR_REGISTRY }} \
+            --username "${{ secrets.ACR_USERNAME }}" \
+            --password-stdin
+
+      - name: Étiquetage de l'image
+        run: |
+          docker tag api-films ${{ secrets.ACR_REGISTRY }}/api-films:${{ github.sha }}
+
+      - name: Publication de l'image
+        run: |
+          docker push ${{ secrets.ACR_REGISTRY }}/api-films:${{ github.sha }}
