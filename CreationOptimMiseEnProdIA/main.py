@@ -48,7 +48,7 @@ def predict(data: PredictionRequest):
 
     # Passage probabilité → classe
     # Le modèle est-il suffisamment sûr de son choix ?
-    if 0.1 < proba < 0.9:
+    if 0.2 < proba < 0.8:
         raise HTTPException(
             status_code=422,
             detail=f"Prédiction trop incertaine, probabilité = {int(proba*100)}%."
