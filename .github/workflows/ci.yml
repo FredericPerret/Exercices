@@ -18,7 +18,7 @@ jobs:
 
       - name: Installation des dépendances
         working-directory: CreationOptimMiseEnProdIA
-        run:
+        run: |
           pip install -r requirements.txt
           pip install pytest
 
