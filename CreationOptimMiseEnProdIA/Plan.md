@@ -64,8 +64,8 @@ Les étapes et les tâches associées présentées dans ce document ont été d�
 | T2.4 |  API accessible en local testée | API avec barrière configurée et testée | 2 | 1 |
 |T2.5 | API accessible en local avec barrière | image docker construite avec l'API | 2 | 1 |
 | T2.6 | image docker | résultats tests testsAPI.md | 1 | 0.5 |
-| T2.7 | API avec barrière, répertoire testsAuto | workflow GitHub Actions avec jobs test et image | 3 | |
-| T2.8 | workflow avec les deux jobs | résultats tests testsAPI.md | 1 | |
+| T2.7 | API avec barrière, répertoire testsAuto | workflow GitHub Actions avec jobs test et image | 3 |1.5 |
+| T2.8 | workflow avec les deux jobs | résultats tests testsAPI.md | 1 |0.5 |
 | T2.9 | accès Azure | registre de conteneurs rempli | 1 | |
 | T2.10 | registre conteneurs rempli | job publier ajouté au workflow | 2 | |
 | T2.11 | job publier fonctionnel | résultats tests testsAPI.md | 1 | |

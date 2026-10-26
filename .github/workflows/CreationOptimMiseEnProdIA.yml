@@ -4,6 +4,7 @@ on:
   push:
     paths:
           - "CreationOptimMiseEnProdIA/**"
+          - "!CreationOptimMiseEnProdIA/**/*.md"
           - ".github/workflows/CreationOptimMiseEnProdIA.yml"
 
 jobs:

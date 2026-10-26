@@ -14,3 +14,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 Après avoir lancé le conteneur à partir de l'image api-films :
 docker run --rm -p 8000:8000 api-films
 on effectue les mêmes tests que ci-dessus => mêmes résultats.
+
+## Tests workflow GitHub
+Dans le fichier config.yml, f1_test_min passé de 0.8 à 0.9 + commit + push => workflow arrêté à l'étape tests (cf. EchecWorkflow_f1_test_min_0,9.png).
+Lorsque la valeur est rétablie à 0.8 + commit + push => les deux étapes du workflow fonctionne correctement.
