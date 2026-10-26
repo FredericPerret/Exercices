@@ -44,14 +44,15 @@ def health():
 @app.post("/predict")
 def predict(data: PredictionRequest):
     # Barrière qualité
-    if len(data.texte) < config["barriere"]["taille_min_texte"]:
+    texte = data.texte.strip()
+    if len(texte) < config["barriere"]["taille_min_texte"]:
         raise HTTPException(
             status_code=400, # Bad Request
             detail="Le texte est trop court pour effectuer une prédiction."
         )
     # Vectorisation du texte
-    X = vectorizer.transform([data.texte])
-    mots = data.texte.lower().split()
+    X = vectorizer.transform([texte])
+    mots = texte.lower().split()
     nb_reconnus = sum(mot in vectorizer.vocabulary_ for mot in mots)
     ratio = nb_reconnus / len(mots)
     if X.nnz < config["barriere"]["min_mots_reconnus"] or ratio < config["barriere"]["ratio_min_mots_vocabulaire"]:
