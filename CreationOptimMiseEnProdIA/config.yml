@@ -1,0 +1,13 @@
+modele:
+  f1_test_min: 0.8
+  taille_test_min: 300
+
+barriere:
+  taille_min_texte: 20
+  min_mots_reconnus: 3
+  ratio_min_mots_vocabulaire: 0.2
+  marge_confiance: 0.2
+
+tests:
+  taux_reussite_min: 0.80
+  taux_confiance_min: 0.90
