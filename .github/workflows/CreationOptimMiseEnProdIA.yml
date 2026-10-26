@@ -5,6 +5,8 @@ on:
     paths:
           - "CreationOptimMiseEnProdIA/**"
           - "!CreationOptimMiseEnProdIA/**/*.md"
+          - "!CreationOptimMiseEnProdIA/**/*.ipynb"
+          - "!CreationOptimMiseEnProdIA/**/*.png"
           - ".github/workflows/CreationOptimMiseEnProdIA.yml"
 
 jobs:
