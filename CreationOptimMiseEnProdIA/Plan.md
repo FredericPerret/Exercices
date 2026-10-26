@@ -60,10 +60,10 @@ Les étapes et les tâches associées présentées dans ce document ont été d�
 | T1.8 | modele.ipynb modèle optimal évalué | modele.keras, vectoriseur.joblib, metrics.json, reference.csv dans répertoire model| 2| 1 |
 |T2.1 | répertoire model avec les 4 fichiers |  API accessible en local avec /health et /predict | 3 | 1.5 |
 | T2.2 | API accessible en local | résultats tests testsAPI.md  | 1 | 1 |
-| T2.3 | API accessible en local testée manuellement | répertoire tests avec tous les tests .py exécutables via pytest | 3 | 1 |
+| T2.3 | API accessible en local testée manuellement | répertoire tests avec tous les tests .py exécutables via pytest | 3 | 2 |
 | T2.4 |  API accessible en local testée | API avec barrière configurée et testée | 2 | 1 |
-|T2.5 | API accessible en local avec barrière | image docker construite avec l'API | 2 | |
-| T2.6 | image docker | résultats tests testsAPI.md | 1 | |
+|T2.5 | API accessible en local avec barrière | image docker construite avec l'API | 2 | 1 |
+| T2.6 | image docker | résultats tests testsAPI.md | 1 | 0.5 |
 | T2.7 | API avec barrière, répertoire testsAuto | workflow GitHub Actions avec jobs test et image | 3 | |
 | T2.8 | workflow avec les deux jobs | résultats tests testsAPI.md | 1 | |
 | T2.9 | accès Azure | registre de conteneurs rempli | 1 | |
