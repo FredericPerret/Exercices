@@ -1,0 +1,27 @@
+name: CI API Films
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installation Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Installation des dépendances
+        working-directory: CreationOptimMiseEnProdIA
+        run:
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Tests
+        working-directory: CreationOptimMiseEnProdIA
+        run: python -m pytest
