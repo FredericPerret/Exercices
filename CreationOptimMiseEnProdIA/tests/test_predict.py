@@ -2,10 +2,13 @@ from fastapi.testclient import TestClient
 import sys
 from pathlib import Path
 import pandas as pd
+import yaml
 
 parent_dir = Path(__file__).parent.parent
 sys.path.append(parent_dir)
 from main import app
+with open(parent_dir / "config.yml", "r", encoding="utf-8") as fichier:
+    config = yaml.safe_load(fichier)
 
 client = TestClient(app)
 MODEL_DIR = parent_dir / "model"
@@ -46,6 +49,6 @@ class TestPredict:
                 if prediction == cible:
                     nbOK += 1
         tauxOK = nbOK / nbPredits
-        tauxCouverture = nbPredits / len(df_prod)
-        assert tauxOK > 0.8
-        assert tauxCouverture > 0.9
+        tauxConfiance = nbPredits / len(df_prod)
+        assert tauxOK >= config["tests"]["taux_reussite_min"]
+        assert tauxConfiance >= config["tests"]["taux_confiance_min"]
