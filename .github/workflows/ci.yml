@@ -20,7 +20,7 @@ jobs:
         working-directory: CreationOptimMiseEnProdIA
         run: |
           pip install -r requirements.txt
-          pip install pytest httpx2
+          pip install pytest httpx2 pandas
 
       - name: Tests
         working-directory: CreationOptimMiseEnProdIA
