@@ -77,7 +77,3 @@ def predict(data: PredictionRequest):
         classe = "comédie"
 
     return {"prediction": classe}
-
-@app.get("/hello")
-def hello():
-    return {"message": "Wie geht's dir ?"}
