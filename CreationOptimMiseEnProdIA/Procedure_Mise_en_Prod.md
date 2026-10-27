@@ -1,0 +1,12 @@
+### Git push
+Des modifications effectuées dans le répertoire CreationOptimMiseEnProdIA envoyées à GitHub via un git push déclenchent le workflow décrit sous .github/workflows/CreationOptimMiseEnProdIA.yml avec 3 jobs qui doivent s'enchaîner :
+- test : exécute les tests automatiques décrits sous CreationOptimMiseEnProdIA/tests via pytest, après avoir récupéré le dépôt,  installé Python et ses dépendances listées sous requirements.txt et celles propres aux tests (pytest, httpx2, pandas).
+- img : construit l'image Docker à partir des fichiers et répertoires présents sous CreationOptimMiseEnProdIA du dépôt récupéré, selon Dockerfile et en excluant les fichiers et répertoires sous .dockerignore, puis teste le bon fonctionnement du conteneur créé à partir de cette image en appelant l'endpoint /health. L'image est alors sauvegardée sous forme de fichier tar pour être transmise au job suivant.
+- publier : après avoir récupéré et chargé l'image Docker du job précédent, le job se connecte au registre Azure (ACR) selon les secrets enregistrés sous GitHub, étiquette l'image avec le sha du push, et l'envoie dans le registre.
+
+### GitHub
+Le workflow avec ces 3 jobs décrits ci-avant sont visibles sous le dépôt https://github.com/FredericPerret/Exercices sous l'onglet Actions. Le workflow doit passer au vert avant de pouvoir aller à l'étape suivante. Bien noter le sha du push présent dans le commentaire de l'exécution du worklow (cf. GitHubShaPush.png), le sha complet est dans l'URL du sha réduit.
+
+### Azure
+Dans le groupe de ressources fperretRG, on trouve l'application conteneur api-films-fperret. Lorsqu'on clique dessus, dans la fenêtre qui s'ouvre, le menu à gauche Application / Révisions et réplicas ouvre la liste des révisions actives. En cliquant en haut sur le menu "Créer une révision", sous l'onglet Conteneur, l'image conteneur api-films-fperret apparaît dans une liste, on la coche et on la modifie : dans le formulaire qui s'ouvre, sous l'onglet Propriétés, on modifie la balise d'image en sélectionnant celle qui correspond au sha du push (cf. AzureMiseEnProdNouveauPush.png). Après avoir cliqué sur Enregistrer, puis dans la fenêtre précédente sur Créer, la nouvelle révision se déploie.  
+L'URL publique de l'application est dans le menu Vue d'ensemble de l'application conteneur api-films-fperret, champ URL de l’application.
