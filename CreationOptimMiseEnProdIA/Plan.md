@@ -69,11 +69,11 @@ Les étapes et les tâches associées présentées dans ce document ont été d�
 | T2.9 | accès Azure | registre de conteneurs rempli | 1 | 0.5 |
 | T2.10 | registre conteneurs rempli | job publier ajouté au workflow | 2 |  1|
 | T2.11 | job publier fonctionnel | résultats tests testsAPI.md | 1 | 0.5 |
-| T2.12 | workflow complet fonctionnel | résultats tests testsAPI.md | 1 | |
-| T2.13 | publication complète réussie | PROCEDURE_MISE_EN_PRODUCTION.md | 3 | |
-| T2.14 | Azure Cost Calculator | FIN_DE_VIE.md | 1 | |
-| T2.15 | publication complète réussie | FIN_DE_VIE.md | 1 | |
-| T2.16 | suppression complète effectuée | FIN_DE_VIE.md | 2 | |
+| T2.12 | workflow complet fonctionnel | résultats tests testsAPI.md | 1 | 0.5 |
+| T2.13 | publication complète réussie | Procedure_Mise_en_Prod.md | 3 | 2 |
+| T2.14 | Azure Cost Calculator | FIN_DE_VIE.md | 1 | 0.5 |
+| T2.15 | publication complète réussie | FIN_DE_VIE.md | 1 | 0.5 |
+| T2.16 | suppression complète effectuée | FIN_DE_VIE.md | 2 |  0.5|
 
 
 
